@@ -22,7 +22,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">H<span>B</span></a>
+      <a class="brand" href="index.html" aria-label="HB Web Design — Home"><span class="brand-mark" aria-hidden="true">H<span>B</span></span><span class="brand-name">Web Design</span></a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
       <nav class="nav" id="primary-navigation" aria-label="Main navigation">
         <a class="nav-link active" href="index.html">Home</a>
@@ -41,12 +41,17 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Your business deserves a website that works harder.</h1>
-        <p class="lead">Custom, responsive websites for small businesses—built with clean code, thoughtful design, and a clear path for customers to get in touch. No bulky page builder required.</p>
+        <span class="eyebrow">Independent web design &amp; development</span>
+        <h1>Small business web design, built to make an impact.<span class="headline-dot">.</span></h1>
+        <p class="lead">I design and build fast, clear, mobile-friendly websites that help people discover your business, trust what you do, and get in touch. No page builders. No unnecessary complexity.</p>
         <div class="btn-group">
-          <a class="btn btn-primary" href="contact.html">Discuss your project</a>
-          <a class="btn btn-secondary" href="services.html">Explore services</a>
+          <a class="btn btn-primary" href="contact.html">Get a free quote <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-secondary" href="services.html">See what I offer</a>
         </div>
+        <p class="hero-note">Independent web design • Built around your business</p>
+      </div>
+      <div class="hero-logo" aria-hidden="true">
+        <img src="assets/mascot.png" alt="" width="420" height="420" loading="eager">
       </div>
     </section>
 
@@ -58,37 +63,40 @@
           <span>Performance-minded, mobile-first builds</span>
         </div>
         <div class="trust-item">
-          <strong>Lean</strong>
-          <span>Purposeful HTML, CSS &amp; JavaScript</span>
+          <strong>Clear</strong>
+          <span>Easy to navigate, easy to understand</span>
         </div>
         <div class="trust-item">
-          <strong>Clear</strong>
-          <span>Simple scopes and transparent project handoffs</span>
+          <strong>Personal</strong>
+          <span>Work directly with your designer and developer</span>
         </div>
       </div>
     </div>
 
     <!-- Services preview -->
-    <section class="section">
+    <section class="section section--services">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Services</span>
-          <h2>What I build</h2>
-          <p class="lead">Three things, done well. No upsells, no mystery packages.</p>
+          <h2>Everything your website needs. Nothing it doesn’t.</h2>
+          <p class="lead">From a brand-new site to a thoughtful redesign, I make it easier for customers to find you and take the next step.</p>
         </div>
-        <div class="grid grid--3">
+        <div class="grid grid--3 service-grid">
           <div class="card">
-            <h3>Brochure Websites</h3>
+            <span class="service-icon" aria-hidden="true">▣</span>
+            <h3>Custom Business Websites</h3>
             <p>A sharp 5-page site for your business — Home, About, Services, Gallery, Contact. Everything a customer needs to choose you.</p>
             <p class="price">from $1,200</p>
           </div>
           <div class="card">
+            <span class="service-icon" aria-hidden="true">↗</span>
             <h3>Website Redesigns</h3>
             <p>If your current site feels outdated or hard to navigate, I can redesign it with clearer pages and better mobile usability.</p>
             <p class="price">from $900</p>
           </div>
           <div class="card">
-            <h3>Care Plans</h3>
+            <span class="service-icon" aria-hidden="true">✳</span>
+            <h3>Care Plans &amp; Updates</h3>
             <p>Ongoing updates, edits, and support after launch. You run your business; I keep the website handled.</p>
             <p class="price">$150/mo</p>
           </div>
@@ -100,7 +108,7 @@
     </section>
 
     <!-- Featured work -->
-    <section class="section section--tight">
+    <section class="section section--tight section--quiet">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Work</span>
@@ -165,7 +173,7 @@
       </div>
     </section>
     <!-- Approach -->
-    <section class="section section--tight" aria-labelledby="approach-heading">
+    <section class="section section--tight section--grid" aria-labelledby="approach-heading">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">The approach</span>
