@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HB Web Design — Websites for Small Businesses</title>
+  <meta name="description" content="HB Web Design builds fast, hand-coded websites for small businesses in the Bay Area, New Orleans, and Durham. No page builders, no bloat — just sites that bring you customers.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Set theme before paint: saved choice > system preference > light default
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">H<span>B</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="primary-navigation" aria-label="Main navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="work.html">Work</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Your business deserves a website that works harder.</h1>
+        <p class="lead">Custom, responsive websites for small businesses—built with clean code, thoughtful design, and a clear path for customers to get in touch. No bulky page builder required.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="contact.html">Discuss your project</a>
+          <a class="btn btn-secondary" href="services.html">Explore services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <div class="trust-strip">
+      <div class="container">
+        <div class="trust-item">
+          <strong>Fast</strong>
+          <span>Performance-minded, mobile-first builds</span>
+        </div>
+        <div class="trust-item">
+          <strong>Lean</strong>
+          <span>Purposeful HTML, CSS &amp; JavaScript</span>
+        </div>
+        <div class="trust-item">
+          <strong>Clear</strong>
+          <span>Simple scopes and transparent project handoffs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2>What I build</h2>
+          <p class="lead">Three things, done well. No upsells, no mystery packages.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Brochure Websites</h3>
+            <p>A sharp 5-page site for your business — Home, About, Services, Gallery, Contact. Everything a customer needs to choose you.</p>
+            <p class="price">from $1,200</p>
+          </div>
+          <div class="card">
+            <h3>Website Redesigns</h3>
+            <p>If your current site feels outdated or hard to navigate, I can redesign it with clearer pages and better mobile usability.</p>
+            <p class="price">from $900</p>
+          </div>
+          <div class="card">
+            <h3>Care Plans</h3>
+            <p>Ongoing updates, edits, and support after launch. You run your business; I keep the website handled.</p>
+            <p class="price">$150/mo</p>
+          </div>
+        </div>
+        <div class="text-center mt-2">
+          <a class="btn btn-secondary" href="services.html">All services &amp; details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured work -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Work</span>
+          <h2>Project concepts</h2>
+          <p class="lead">Examples of the kinds of small-business sites I plan to build. These are project concepts, not completed client work.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="work-card">
+            <div class="work-media">Restaurant website concept</div>
+            <div class="work-body">
+              <span class="badge">Concept project</span>
+              <h3>Neighborhood Restaurant</h3>
+              <p>A concept focused on an accessible menu, hours, directions and a clear reservation link.</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-media">Contractor website concept</div>
+            <div class="work-body">
+              <span class="badge">Concept project</span>
+              <h3>Home Contractor</h3>
+              <p>A concept with focused service pages, project photography and a simple quote request.</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-media">Fitness website concept</div>
+            <div class="work-body">
+              <span class="badge">Concept project</span>
+              <h3>Local Gym</h3>
+              <p>A concept centered on class schedules, instructor profiles and trial inquiries.</p>
+            </div>
+          </article>
+        </div>
+        <div class="text-center mt-2">
+          <a class="btn btn-secondary" href="work.html">View all work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing teaser -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Pricing</span>
+          <h2>Simple, honest pricing</h2>
+          <p class="lead">Two ways to work together. No fine print.</p>
+        </div>
+        <div class="grid grid--2" style="max-width: 760px; margin: 0 auto;">
+          <div class="card text-center">
+            <h3>One-Time Project</h3>
+            <p class="price">$1,200 – $1,500</p>
+            <p>You own the finished site outright. Pay once, it's yours.</p>
+          </div>
+          <div class="card text-center">
+            <h3>Monthly Plan</h3>
+            <p class="price">$150/mo</p>
+            <p>Design, hosting, and unlimited small edits — one simple payment.</p>
+          </div>
+        </div>
+        <div class="text-center mt-2">
+          <a class="btn btn-secondary" href="pricing.html">Full pricing details</a>
+        </div>
+      </div>
+    </section>
+    <!-- Approach -->
+    <section class="section section--tight" aria-labelledby="approach-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The approach</span>
+          <h2 id="approach-heading">Simple from first call to launch.</h2>
+          <p class="lead">A straightforward process means fewer surprises and a site built around your customers.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="card"><span class="step-number">01</span><h3>Discover</h3><p>We talk about your business, audience, goals and must-have pages.</p></div>
+          <div class="card"><span class="step-number">02</span><h3>Design &amp; build</h3><p>I create a responsive site with clear messaging and accessible navigation.</p></div>
+          <div class="card"><span class="step-number">03</span><h3>Review &amp; launch</h3><p>We test, refine and agree on the final handoff before publishing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Let's build something that brings you business.</h2>
+          <p>Tell me about your project — I’ll get back to you as soon as I can.</p>
+          <a class="btn btn-primary" href="contact.html">Get a free quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">H<span>B</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="contact.html">Request a quote</a></li>
+            <li><a href="about.html">Meet the developer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HB Web Design. All rights reserved.</span>
+        <span>Built with HTML, CSS &amp; JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

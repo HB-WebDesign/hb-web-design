@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — HB Web Design</title>
+  <meta name="description" content="Portfolio of HB Web Design: concept and client website projects for restaurants, contractors, gyms, and local small businesses.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">H<span>B</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="primary-navigation" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link active" href="work.html">Work</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Work</span>
+        <h1>Websites built around real goals.</h1>
+        <p class="lead">These are ideas for future concept projects—not shipped client websites or working demos. I’ll replace them with screenshots and case studies as projects are completed.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid" style="gap: 2.5rem;">
+
+          <article class="work-card">
+            <div class="work-media">Restaurant concept · Preview coming soon</div>
+            <div class="work-body">
+              <span class="badge">Concept project</span>
+              <h3>Neighborhood Restaurant</h3>
+              <p><strong>The problem:</strong> most restaurant sites bury the menu three clicks deep and look broken on phones — exactly where hungry customers are browsing.</p>
+              <p><strong>Design direction:</strong> a menu-forward site where hours, location, and the full menu are one tap away. Online reservations up top, click-to-call on every screen, photos that actually make the food look good.</p>
+              <ul style="list-style: none; margin-top: 1rem;">
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ One-tap menu, hours &amp; directions</li>
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Space for a reservation integration</li>
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Performance-conscious design</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-media">Contractor concept · Preview coming soon</div>
+            <div class="work-body">
+              <span class="badge">Concept project</span>
+              <h3>Home Contractor</h3>
+              <p><strong>The problem:</strong> contractors live on referrals because their websites don't generate leads — no service pages, no proof of work, no easy way to request a quote.</p>
+              <p><strong>Design direction:</strong> a lead machine. Dedicated page per service (kitchens, baths, additions), a project gallery that sells the craftsmanship, and quote-request forms placed where interest peaks.</p>
+              <ul style="list-style: none; margin-top: 1rem;">
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Service pages built to rank on Google</li>
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Before/after project gallery</li>
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Quote forms that feed straight to email</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-media">Fitness concept · Preview coming soon</div>
+            <div class="work-body">
+              <span class="badge">Concept project</span>
+              <h3>Local Gym</h3>
+              <p><strong>The problem:</strong> gym sites read like brochures when they should read like invitations — class times hidden in PDFs, no clear path from "interested" to "signed up."</p>
+              <p><strong>Design direction:</strong> a site with one job: trial signups. Class schedule front and center, trainer bios with real personality, and a free-trial flow that's three fields and done.</p>
+              <ul style="list-style: none; margin-top: 1rem;">
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Class schedule presentation</li>
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Clear trial inquiry form</li>
+                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Trainer bios that build trust</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Note -->
+    <section class="section section--tight">
+      <div class="container" style="max-width: 720px;">
+        <div class="card text-center">
+          <h3>Your project could be next.</h3>
+          <p class="muted">These concepts show the type of work I want to do. Your project will be planned around your goals — designed around the one action that grows your business, not around looking pretty in a portfolio.</p>
+          <div class="mt-1">
+            <a class="btn btn-primary" href="contact.html">Start your project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Like what you see?</h2>
+          <p>Tell me about your business — I’ll get back to you as soon as I can.</p>
+          <a class="btn btn-primary" href="contact.html">Get a free quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">H<span>B</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="contact.html">Request a quote</a></li>
+            <li><a href="about.html">Meet the developer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HB Web Design. All rights reserved.</span>
+        <span>Built with HTML, CSS &amp; JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

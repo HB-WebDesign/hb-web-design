@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — HB Web Design</title>
+  <meta name="description" content="Simple, honest web design pricing: one-time projects from $1,200 or a $150/mo plan with hosting and unlimited edits. No fine print.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">H<span>B</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="primary-navigation" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="work.html">Work</a>
+        <a class="nav-link active" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Pricing</span>
+        <h1>Simple, honest pricing.</h1>
+        <p class="lead">Two ways to work together. Pick the one that fits your budget — both get you the same quality site.</p>
+      </div>
+    </section>
+
+    <!-- Pricing cards -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid grid--2" style="max-width: 880px; margin: 0 auto;">
+          <div class="card featured card--framed">
+            <span class="badge">Most clients start here</span>
+            <h3>One-Time Project</h3>
+            <p class="price">$1,200 – $1,500</p>
+            <p class="muted">Pay once. The finished site is yours outright.</p>
+            <ul>
+              <li>Up to 5 standard pages, scoped together</li>
+              <li>Mobile-first design</li>
+              <li>Contact form &amp; click-to-call</li>
+              <li>Basic on-page SEO</li>
+              <li>You own everything — code, domain, content</li>
+              <li>30 days of post-launch fixes included</li>
+            </ul>
+            <div class="mt-1">
+              <a class="btn btn-primary" href="contact.html">Start a project</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Monthly Plan</h3>
+            <p class="price">$150/mo</p>
+            <p class="muted">One simple payment. Everything handled.</p>
+            <ul>
+              <li>Up to 5 standard pages, scoped together</li>
+              <li>Hosting &amp; uptime monitoring included</li>
+              <li>Routine small content updates, as agreed</li>
+              <li>Contact form &amp; click-to-call</li>
+              <li>Basic on-page SEO</li>
+              <li>Response times defined in the agreement</li>
+            </ul>
+            <div class="mt-1">
+              <a class="btn btn-secondary" href="contact.html">Start a plan</a>
+            </div>
+          </div>
+        </div>
+        <p class="text-center muted mt-2" style="max-width: 640px; margin-left: auto; margin-right: auto;">Need more than 5 pages, a blog, or something custom? <a href="contact.html">Tell me about it</a> — I'll quote it straight.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--tight">
+      <div class="container" style="max-width: 760px;">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Pricing questions, answered straight</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>How do payments work?</summary>
+            <p class="faq-answer">Payment milestones, any setup fee, and accepted payment methods will be confirmed in your proposal before work begins.</p>
+          </details>
+          <details>
+            <summary>Do I own my website?</summary>
+            <p class="faq-answer">For one-time projects, ownership and handoff are defined in your agreement after final payment. Monthly plans include separate hosting, licensing and cancellation terms explained before signup.</p>
+          </details>
+          <details>
+            <summary>What counts as a "small edit" on the monthly plan?</summary>
+            <p class="faq-answer">Common examples include text edits, hours and image swaps. New pages, redesigns and major functionality are quoted separately; we’ll define what’s included up front.</p>
+          </details>
+          <details>
+            <summary>How long does a project take?</summary>
+            <p class="faq-answer">Timelines depend on page count, content readiness, integrations and feedback. I’ll provide a proposed schedule with your quote.</p>
+          </details>
+          <details>
+            <summary>What if I already have a website?</summary>
+            <p class="faq-answer">I’ll review your current site and suggest improvements, a targeted redesign or a new build depending on its condition and your goals.</p>
+          </details>
+          <details>
+            <summary>Why hand-coded instead of WordPress or Wix?</summary>
+            <p class="faq-answer">Lean HTML, CSS and JavaScript can reduce unnecessary dependencies and make maintenance more predictable. Every website still needs secure hosting, updates and ongoing testing.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Ready when you are.</h2>
+          <p>Free quote, no pressure, I’ll get back to you as soon as I can.</p>
+          <a class="btn btn-primary" href="contact.html">Get a free quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">H<span>B</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="contact.html">Request a quote</a></li>
+            <li><a href="about.html">Meet the developer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HB Web Design. All rights reserved.</span>
+        <span>Built with HTML, CSS &amp; JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

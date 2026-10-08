@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — HB Web Design</title>
+  <meta name="description" content="Brochure websites, website redesigns, and monthly care plans for small businesses. Hand-coded, fast, and built to bring you customers.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">H<span>B</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="primary-navigation" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="services.html">Services</a>
+        <a class="nav-link" href="work.html">Work</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h1>Three things, done well.</h1>
+        <p class="lead">From a new website to a redesign or ongoing upkeep, choose the support your business actually needs.</p>
+      </div>
+    </section>
+
+    <!-- Service detail cards -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Brochure Websites</h3>
+            <p>A sharp 5-page site for your business — Home, About, Services, Gallery, Contact. Everything a customer needs to find you, trust you, and reach you.</p>
+            <ul>
+              <li>Custom design — no templates-that-look-like-templates</li>
+              <li>Mobile-first, hand-coded HTML &amp; CSS</li>
+              <li>Contact form &amp; click-to-call buttons</li>
+              <li>Google Maps embed &amp; business info</li>
+              <li>SEO-friendly page titles and structure</li>
+              <li>You own the finished site outright</li>
+            </ul>
+            <p class="price">from $1,200</p>
+            <p class="muted">Typical timeline: 2–3 weeks</p>
+          </div>
+          <div class="card">
+            <h3>Website Redesigns</h3>
+            <p>An outdated website can make it harder for customers to find what they need. I rebuild it from scratch: keep what works, fix everything that doesn't.</p>
+            <ul>
+              <li>Full audit of your current site first</li>
+              <li>Complete rebuild — modern, mobile-first</li>
+              <li>Your existing content migrated for you</li>
+              <li>Redirect planning to help preserve existing URLs</li>
+              <li>Same speed &amp; SEO standards as new builds</li>
+              <li>You own the finished site outright</li>
+            </ul>
+            <p class="price">from $900</p>
+            <p class="muted">Typical timeline: 2–4 weeks</p>
+          </div>
+          <div class="card">
+            <h3>Care Plans</h3>
+            <p>Websites go stale. Menus change, hours change, photos age. A care plan keeps yours current without you ever touching code.</p>
+            <ul>
+              <li>Unlimited small edits &amp; updates</li>
+              <li>Hosting &amp; uptime monitoring included</li>
+              <li>Monthly backups</li>
+              <li>Priority support — 24–48 hr turnaround</li>
+              <li>Small design tweaks as your business evolves</li>
+              <li>Terms and cancellation policy agreed before signup</li>
+            </ul>
+            <p class="price">$150/mo</p>
+            <p class="muted">Ongoing support; terms set by agreement</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Process</span>
+          <h2>How it works</h2>
+          <p class="lead">Simple enough to explain in four steps. No black box.</p>
+        </div>
+        <div class="steps" style="max-width: 720px;">
+          <div class="step">
+            <h3>Call</h3>
+            <p>A 20-minute conversation about your business and what you need. You'll fill out a short questionnaire first so we skip the small talk and get to the point.</p>
+          </div>
+          <div class="step">
+            <h3>Design</h3>
+            <p>I outline the visual direction, content needs and page structure, then gather your feedback before building.</p>
+          </div>
+          <div class="step">
+            <h3>Build</h3>
+            <p>I build your responsive pages and share a preview for review before launch.</p>
+          </div>
+          <div class="step">
+            <h3>Launch</h3>
+            <p>We point your domain at the new site, test everything, and go live. Then a short walkthrough so you know exactly what you have — and what happens next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Not sure which one fits?</h2>
+          <p>Describe your situation and I'll tell you straight — even if the answer is "you don't need me yet."</p>
+          <a class="btn btn-primary" href="contact.html">Get a free quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">H<span>B</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="contact.html">Request a quote</a></li>
+            <li><a href="about.html">Meet the developer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HB Web Design. All rights reserved.</span>
+        <span>Built with HTML, CSS &amp; JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

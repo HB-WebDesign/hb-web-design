@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — HB Web Design</title>
+  <meta name="description" content="Meet Hector, the developer behind HB Web Design — hand-coded websites for small businesses in the Bay Area, New Orleans, and Durham.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">H<span>B</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="primary-navigation" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="work.html">Work</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">About</span>
+        <h1>The person behind the pixels.</h1>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid grid--2" style="align-items: start; gap: 3rem;">
+          <div>
+            <!-- TODO: replace with a real photo of Hector -->
+            <div class="work-media" style="border-radius: var(--radius); border: 1px solid var(--border); aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center; color: var(--muted); background: var(--surface-2);">[Photo of Hector]</div>
+          </div>
+          <div>
+            <h2>Hey, I'm Hector.</h2>
+            <p>I'm a front-end developer, and HB Web Design is my shop — HB are my initials, and the skull is just what happens when you let a Stephen King reader design a logo.</p>
+            <p>I've lived and worked in the Bay Area, New Orleans, and Durham. Living in different communities showed me how much local businesses depend on a clear online presence—and how hard it can be to know what you actually need from a website.</p>
+            <p>I started HB Web Design to offer a direct, collaborative approach: thoughtful design, lean code, and honest conversations about scope and cost. You work with me throughout the project.</p>
+            <p>If that sounds like someone you want building your website, <a href="contact.html">let's talk</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I work -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How I work</span>
+          <h2>A few things I believe</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Speed is a feature</h3>
+            <p>Half your visitors are on phones, many on mediocre connections. Speed matters, so I keep assets and dependencies intentional and test on real screen sizes.</p>
+          </div>
+          <div class="card">
+            <h3>Honest scoping</h3>
+            <p>I'll tell you what you need and what you don't. I’ll recommend a scope that fits your goals rather than adding features you don’t need. If I'm not the right fit, I'll say that too.</p>
+          </div>
+          <div class="card">
+            <h3>You own everything</h3>
+            <p>We’ll agree on ownership, hosting, ongoing support, and how files are handed over before the project starts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Let's see if we're a fit.</h2>
+          <p>One conversation, zero pressure — I’ll get back to you as soon as I can.</p>
+          <a class="btn btn-primary" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">H<span>B</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="contact.html">Request a quote</a></li>
+            <li><a href="about.html">Meet the developer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HB Web Design. All rights reserved.</span>
+        <span>Built with HTML, CSS &amp; JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

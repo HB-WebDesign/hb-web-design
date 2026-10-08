@@ -1,0 +1,620 @@
+/* ============================================================
+   HB Web Design — Design System (styles.css)
+   File 1 of the build. Every page pulls from these tokens and
+   components. Light mode is default; dark mode via [data-theme].
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+/* Headings: Cormorant Garamond — sharp high-contrast serif, vintage
+   book-spine feel. Body: Inter — clean neutral sans. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---------- Theme tokens ---------- */
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius: 12px;
+  --radius-sm: 4px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --header-height: 72px;
+  --max-width: 1140px;
+
+  /* Light mode (default) — clean and trustworthy */
+  --bg: #f7f6f3;
+  --surface: #ffffff;
+  --surface-2: #eeece8;
+  --border: #e4e4e7;
+  --text: #18181b;
+  --muted: #71717a;
+  --accent: #d11f32;          /* crimson */
+  --accent-hover: #a81828;
+  --accent-ink: #ffffff;      /* text on accent */
+  --accent-soft: rgba(209, 31, 50, 0.08);
+  --hero-watermark-opacity: 0; /* skull watermark: dark mode only */
+  --grid-line: rgba(24, 24, 27, 0.055); /* graph-paper grid */
+}
+
+[data-theme="dark"] {
+  --bg: #0c0c0e;
+  --surface: #141417;
+  --surface-2: #1c1c21;
+  --border: #26262b;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --accent: #d11f32;          /* crimson */
+  --accent-hover: #e03244;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(209, 31, 50, 0.12);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --hero-watermark-opacity: 0.06;
+  --grid-line: rgba(255, 255, 255, 0.055); /* graph-paper grid */
+}
+
+/* ---------- Reset & base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  /* A lightweight, CSS-only graph-paper background */
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+img { max-width: 100%; display: block; }
+
+/* The grid is painted directly on body rather than placed behind it,
+   so it stays visible on both light and dark themes. */
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.9rem, 3.5vw, 2.75rem); }
+h3 { font-size: 1.4rem; }
+
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Visible focus for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.75rem 1.25rem;
+  z-index: 200;
+  font-weight: 600;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section { padding: 5rem 0; }
+.section--tight { padding: 3.5rem 0; }
+
+.section-head { max-width: 680px; margin-bottom: 3rem; }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-head p.lead,
+.lead { font-size: 1.15rem; color: var(--muted); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+  text-decoration: none;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-primary:hover { background: var(--accent-hover); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.25s ease;
+}
+
+.site-header .container {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.brand:hover { text-decoration: none; }
+.brand span { color: var(--accent); }
+
+.nav { display: flex; align-items: center; gap: 0.25rem; }
+
+.nav a.nav-link {
+  color: var(--muted);
+  font-weight: 500;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.nav a.nav-link:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+.nav a.nav-link.active { color: var(--accent); font-weight: 600; }
+
+.nav .btn { margin-left: 0.75rem; padding: 0.65rem 1.25rem; font-size: 0.95rem; }
+
+/* Theme toggle */
+.theme-toggle {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.15rem;
+  margin-left: 0.5rem;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+.theme-toggle:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+/* Mobile nav */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.3rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 5rem;
+  background: transparent;
+}
+.hero .container { position: relative; z-index: 1; }
+.hero::after {
+  /* skull watermark — visible in dark mode only, via token opacity */
+  content: "";
+  position: absolute;
+  right: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(480px, 60vw);
+  aspect-ratio: 1;
+  background: url('assets/mascot.png') center / contain no-repeat;
+  opacity: var(--hero-watermark-opacity);
+  pointer-events: none;
+}
+
+.hero h1 { margin-bottom: 1.25rem; max-width: 16ch; }
+.hero .lead { max-width: 52ch; }
+
+/* ---------- Trust strip ---------- */
+.trust-strip {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.trust-strip .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.trust-item strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.trust-item span { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Cards & grids ---------- */
+.grid { display: grid; gap: 1.5rem; }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card h3 { margin-bottom: 0.75rem; }
+.card p { color: var(--muted); }
+.card .price {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 1rem 0 0.25rem;
+}
+.card ul { list-style: none; margin-top: 1rem; }
+.card ul li {
+  padding: 0.45rem 0 0.45rem 1.75rem;
+  position: relative;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+.card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0.25rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+.card.featured { border: 2px solid var(--accent); }
+
+/* Red-box highlight (from the 8-bit portfolio's crimson theme):
+   sharp corners, red frame, faint red glow. Use on featured cards. */
+.card--framed {
+  border-radius: 3px;
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow), 0 0 24px rgba(209, 31, 50, 0.10);
+}
+
+/* ---------- Work / portfolio ---------- */
+.work-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+.work-card:hover { transform: translateY(-4px); }
+.work-card .work-media {
+  aspect-ratio: 16 / 10;
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+.work-card .work-body { padding: 1.5rem; }
+.work-card .work-body h3 { margin-bottom: 0.5rem; }
+.work-card .work-body p { color: var(--muted); font-size: 0.95rem; }
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Testimonials ---------- */
+.testimonial {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 1.75rem;
+}
+.testimonial p { font-style: italic; }
+.testimonial cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-radius: var(--radius);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+}
+.cta-band h2 { margin-bottom: 0.75rem; }
+.cta-band p { opacity: 0.92; margin-bottom: 1.75rem; }
+.cta-band .btn-primary {
+  background: var(--accent-ink);
+  color: var(--accent);
+}
+.cta-band .btn-primary:hover { background: var(--surface-2); }
+
+/* ---------- FAQ ---------- */
+.faq details {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.faq summary {
+  padding: 1.1rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.faq details[open] summary::after { content: "–"; }
+.faq .faq-answer { padding: 0 1.5rem 1.25rem; color: var(--muted); }
+
+/* ---------- Forms ---------- */
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  transition: border-color 0.2s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form-group textarea { min-height: 140px; resize: vertical; }
+.form-note { font-size: 0.85rem; color: var(--muted); margin-top: 1rem; }
+
+/* ---------- Steps / process ---------- */
+.steps { counter-reset: step; }
+.step {
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 2rem;
+}
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step h3 { margin-bottom: 0.4rem; }
+.step p { color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 3.5rem 0 2rem;
+  margin-top: 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.footer-brand {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.footer-brand span { color: var(--accent); }
+.site-footer p, .site-footer li { color: var(--muted); font-size: 0.95rem; }
+.site-footer ul { list-style: none; }
+.site-footer ul a { color: var(--muted); }
+.site-footer ul a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- Utilities ---------- */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; } .mt-2 { margin-top: 2rem; } .mt-3 { margin-top: 3rem; }
+.mb-1 { margin-bottom: 1rem; } .mb-2 { margin-bottom: 2rem; }
+.muted { color: var(--muted); }
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3rem 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .grid--3 { grid-template-columns: 1fr 1fr; }
+  .trust-strip .container { grid-template-columns: 1fr; gap: 1rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 3.5rem 0; }
+  .grid--3, .grid--2 { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+
+  /* Mobile nav: hidden menu behind hamburger */
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.5rem 1.5rem;
+  }
+  .nav.open { display: flex; }
+  .nav a.nav-link { padding: 0.9rem 0.5rem; border-top: 1px solid var(--border); }
+  .nav .btn { margin: 1rem 0 0; text-align: center; }
+  .theme-toggle { margin-left: 0; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* ============================================================
+   HB Web Design — Crimson editorial refinements
+   Subtle, readable details shared by every static page.
+   ============================================================ */
+
+/* Crisp section separation over the graph-paper canvas */
+.section--tight { position: relative; }
+
+/* Keep cards readable instead of letting grid lines show through text */
+.card, .work-card, .cta-band { box-shadow: var(--shadow); }
+
+/* A restrained crimson accent above the main page heading */
+.hero h1::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin-bottom: 1.35rem;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* More legible text selection and keyboard focus */
+::selection { background: var(--accent); color: #fff; }
+
+/* Avoid fixed background rendering issues on smaller devices */
+@media (max-width: 640px) {
+  body { background-attachment: scroll; background-size: 28px 28px; }
+  .hero { padding: 4.5rem 0 3.5rem; }
+}
+
+/* Site-wide final touches */
+.step-number { display: inline-block; font: 700 .85rem var(--font-sans); letter-spacing: .12em; color: var(--accent); margin-bottom: .75rem; }
+.work-media { padding: 1.25rem; text-align: center; }
+.hero .btn-group { align-items: center; }
+button:disabled { cursor: not-allowed; opacity: .65; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; } }
