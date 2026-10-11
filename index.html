@@ -22,7 +22,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">H<span>B</span></a>
+      <a class="brand" href="index.html" aria-label="HB Web Design — Home"><span class="brand-mark" aria-hidden="true">H<span>B</span></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-name">Web Design</span></a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
       <nav class="nav" id="primary-navigation" aria-label="Main navigation">
         <a class="nav-link active" href="index.html">Home</a>
@@ -38,14 +38,40 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <h1>Your business deserves a website that works harder.</h1>
-        <p class="lead">Custom, responsive websites for small businesses—built with clean code, thoughtful design, and a clear path for customers to get in touch. No bulky page builder required.</p>
-        <div class="btn-group">
-          <a class="btn btn-primary" href="contact.html">Discuss your project</a>
-          <a class="btn btn-secondary" href="services.html">Explore services</a>
+    <!-- Conversion-first hero: technical details, no decorative stock image -->
+    <section class="hero hero--studio" aria-labelledby="hero-heading">
+      <div class="container hero-studio-content">
+        <div class="hero-studio-copy">
+          <div class="studio-location"><span class="studio-overline"><span class="studio-led" aria-hidden="true"></span> INDEPENDENT WEB DESIGN STUDIO <span class="studio-slash" aria-hidden="true">//</span> WORKING WITH BUSINESSES NATIONWIDE</span><span class="studio-service-areas">Build Credibility · Reach More Customers · Grow Beyond Social Media</span></div>
+          <h1 id="hero-heading">Small Business Web Design, <span class="hero-accent">Built To Make An Impact.</span></h1>
+          <p class="lead">Custom, mobile-friendly websites that turn your online presence into a powerful first impression.</p>
+          <div class="btn-group hero-studio-actions">
+            <a class="btn btn-primary" href="contact.html">Get a free quote <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="work.html">Explore my work <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-note"><span class="hero-terminal" aria-hidden="true">&gt;_</span> DESIGN / DEVELOPMENT / SUPPORT <span aria-hidden="true">·</span> NO PAGE BUILDERS</p>
+        </div>
+        <div class="hero-capabilities" aria-label="Why work with HB Web Design">
+          <a class="capability-card" href="services.html">
+            <span class="capability-symbol" aria-hidden="true">&lt;/&gt;</span>
+            <span class="capability-index">01 / DESIGN</span><strong>Custom-built</strong><span>Made for your business.</span>
+            <span class="capability-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="capability-card" href="services.html">
+            <span class="capability-symbol" aria-hidden="true">↗</span>
+            <span class="capability-index">02 / SPEED</span><strong>Built to load fast</strong><span>Lightweight, mobile-first.</span>
+            <span class="capability-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="capability-card" href="about.html">
+            <span class="capability-symbol" aria-hidden="true">◎</span>
+            <span class="capability-index">03 / PROCESS</span><strong>Work with me</strong><span>No agency middlemen.</span>
+            <span class="capability-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="capability-card" href="pricing.html">
+            <span class="capability-symbol" aria-hidden="true">⌘</span>
+            <span class="capability-index">04 / PRICING</span><strong>Clear options</strong><span>Know what you're getting.</span>
+            <span class="capability-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
     </section>
@@ -58,37 +84,76 @@
           <span>Performance-minded, mobile-first builds</span>
         </div>
         <div class="trust-item">
-          <strong>Lean</strong>
-          <span>Purposeful HTML, CSS &amp; JavaScript</span>
+          <strong>Clear</strong>
+          <span>Easy to navigate, easy to understand</span>
         </div>
         <div class="trust-item">
-          <strong>Clear</strong>
-          <span>Simple scopes and transparent project handoffs</span>
+          <strong>Personal</strong>
+          <span>Work directly with your designer and developer</span>
         </div>
       </div>
     </div>
 
+
+    <!-- Founder and offer: a direct introduction before the services -->
+    <section class="section founder-offer" aria-labelledby="founder-offer-heading">
+      <div class="container founder-offer-layout">
+        <div class="founder-offer-aside">
+          <a class="owner-profile" href="about.html" aria-label="Meet Hector Barahona, owner and developer">
+            <div class="owner-profile-image">
+              <img src="assets/portrait.jpg" alt="Hector Barahona" width="600" height="750" loading="lazy" decoding="async">
+              <span class="owner-image-caption">INDEPENDENT STUDIO <span aria-hidden="true">↗</span></span>
+            </div>
+            <div class="owner-profile-info">
+              <span class="owner-profile-label">THE PERSON BEHIND HB</span>
+              <strong>Hector Barahona</strong>
+              <span>Owner / Developer</span>
+            </div>
+          </a>
+          <div class="owner-aside-note"><span class="status-signal" aria-hidden="true"></span> A real person. A direct working relationship.</div>
+        </div>
+        <div class="founder-offer-content">
+          <span class="eyebrow">What I offer <span aria-hidden="true">/ 01</span></span>
+          <h2 id="founder-offer-heading">A better website. <em>A simpler process.</em></h2>
+          <p class="offer-intro">I build custom, mobile-friendly websites for small businesses that need a strong online presence without the complexity of a big agency. You work directly with the person designing and developing your site.</p>
+          <p class="offer-pricing">One-time websites from <strong>$1,200</strong> <span aria-hidden="true">·</span> Care plans from <strong>$150/month</strong></p>
+          <div class="offer-benefits">
+            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">01</span><div><h3>Made for your business</h3><p>Thoughtful layouts and content that reflect your services, personality, and customers.</p></div></article>
+            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">02</span><div><h3>Fast and responsive</h3><p>Lightweight code and mobile-first design, tested for real-world usability.</p></div></article>
+            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">03</span><div><h3>Clean, maintainable code</h3><p>Focused HTML, CSS, and JavaScript without unnecessary page-builder overhead.</p></div></article>
+            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">04</span><div><h3>Clear pricing and scope</h3><p>Know what's included, how the project works, and what happens after launch.</p></div></article>
+            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">05</span><div><h3>Direct access to me</h3><p>No handoffs or account-manager layers. Ask questions and get answers from your developer.</p></div></article>
+            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">06</span><div><h3>Built to be found</h3><p>Accessible structure and search-friendly foundations to help customers discover you.</p></div></article>
+          </div>
+          <div class="offer-actions"><a class="btn btn-primary" href="contact.html">Let's talk about your project <span aria-hidden="true">↗</span></a><a class="offer-secondary-link" href="pricing.html">Explore pricing <span aria-hidden="true">→</span></a></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services preview -->
-    <section class="section">
+    <section class="section section--services">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Services</span>
-          <h2>What I build</h2>
-          <p class="lead">Three things, done well. No upsells, no mystery packages.</p>
+          <h2>Everything your website needs. Nothing it doesn’t.</h2>
+          <p class="lead">From a brand-new site to a thoughtful redesign, I make it easier for customers to find you and take the next step.</p>
         </div>
-        <div class="grid grid--3">
+        <div class="grid grid--3 service-grid">
           <div class="card">
-            <h3>Brochure Websites</h3>
+            <span class="service-icon" aria-hidden="true">▣</span>
+            <h3>Custom Business Websites</h3>
             <p>A sharp 5-page site for your business — Home, About, Services, Gallery, Contact. Everything a customer needs to choose you.</p>
             <p class="price">from $1,200</p>
           </div>
           <div class="card">
+            <span class="service-icon" aria-hidden="true">↗</span>
             <h3>Website Redesigns</h3>
             <p>If your current site feels outdated or hard to navigate, I can redesign it with clearer pages and better mobile usability.</p>
             <p class="price">from $900</p>
           </div>
           <div class="card">
-            <h3>Care Plans</h3>
+            <span class="service-icon" aria-hidden="true">✳</span>
+            <h3>Care Plans &amp; Updates</h3>
             <p>Ongoing updates, edits, and support after launch. You run your business; I keep the website handled.</p>
             <p class="price">$150/mo</p>
           </div>
@@ -100,7 +165,7 @@
     </section>
 
     <!-- Featured work -->
-    <section class="section section--tight">
+    <section class="section section--tight section--quiet">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Work</span>
@@ -165,7 +230,7 @@
       </div>
     </section>
     <!-- Approach -->
-    <section class="section section--tight" aria-labelledby="approach-heading">
+    <section class="section section--tight section--grid" aria-labelledby="approach-heading">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">The approach</span>

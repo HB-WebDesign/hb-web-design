@@ -20,7 +20,6 @@
     // Sun in dark mode (click to go light), moon in light mode
     toggle.textContent = isDark ? '☀' : '☾';
     toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-    toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   }
 
   if (toggle) {
@@ -56,19 +55,8 @@
     });
   }
 
-  /* ---------- Keyboard accessibility ---------- */
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && nav && navToggle && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', 'Open menu');
-      navToggle.textContent = '☰';
-      navToggle.focus();
-    }
-  });
-
   /* ---------- Contact form: prevent double-submit ---------- */
-  var form = document.querySelector('form[action*="formspree"]:not([data-form-status="setup-required"])');
+  var form = document.querySelector('form[action*="formspree"]');
   if (form) {
     form.addEventListener('submit', function () {
       var btn = form.querySelector('button[type="submit"]');
@@ -84,4 +72,22 @@
   document.querySelectorAll('.footer-bottom span:first-child').forEach(function (el) {
     el.textContent = el.textContent.replace(/\u00a9 \d{4}/, '© ' + year);
   });
+})();
+
+
+/* Progressive enhancement: subtle section entrances, no dependencies. */
+(function () {
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var targets = document.querySelectorAll('.section-head, .service-grid .card, .founder-card, .steps .step');
+  if (!targets.length) return;
+  targets.forEach(function (el) { el.classList.add('reveal'); });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px 40px 0px' });
+  targets.forEach(function (el) { observer.observe(el); });
+  document.documentElement.classList.add('js-motion');
 })();
