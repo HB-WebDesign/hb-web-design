@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — HB Web Design</title>
-  <meta name="description" content="Brochure websites, website redesigns, and monthly care plans for small businesses. Hand-coded, fast, and built to bring you customers.">
+  <meta name="description" content="Custom small-business websites, redesigns, and ongoing support from HB Web Design.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
       var saved = null;
       try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', saved || 'dark');
     })();
   </script>
 </head>
-<body>
+<body class="site-subpage subpage--services">
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html" aria-label="HB Web Design — Home"><span class="brand-mark" aria-hidden="true">H<span>B</span></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-name">Web Design</span></a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
       <nav class="nav" id="primary-navigation" aria-label="Main navigation">
         <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link active" href="services.html">Services</a>
+        <a class="nav-link active" href="services.html" aria-current="page">Services</a>
         <a class="nav-link" href="work.html">Work</a>
         <a class="nav-link" href="pricing.html">Pricing</a>
         <a class="nav-link" href="about.html">About</a>
@@ -35,114 +33,59 @@
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <!-- Page hero -->
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Services</span>
-        <h1>Three things, done well.</h1>
-        <p class="lead">From a new website to a redesign or ongoing upkeep, choose the support your business actually needs.</p>
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container page-hero__layout">
+        <div>
+          <p class="page-kicker"><span class="page-kicker__square" aria-hidden="true"></span> 01 / SERVICES</p>
+          <h1 id="page-heading">Three things.<br><span class="headline-rule">Done well.</span></h1>
+          <p class="page-hero__lead">Custom websites, thoughtful redesigns, and ongoing support. The right amount of web design for your business.</p>
+        </div>
+        <aside class="page-hero__aside" aria-label="Page introduction">
+          <span class="page-hero__aside-line" aria-hidden="true"></span>
+          <strong>DESIGNED AROUND YOU</strong>
+          <p>No template-first approach. Just a clear plan and a direct working relationship.</p>
+        </aside>
       </div>
     </section>
-
-    <!-- Service detail cards -->
-    <section class="section section--tight">
+    <section class="sub-section service-list-section" aria-labelledby="service-list-heading">
       <div class="container">
-        <div class="grid grid--3">
-          <div class="card">
-            <h3>Brochure Websites</h3>
-            <p>A sharp 5-page site for your business — Home, About, Services, Gallery, Contact. Everything a customer needs to find you, trust you, and reach you.</p>
-            <ul>
-              <li>Custom design — no templates-that-look-like-templates</li>
-              <li>Mobile-first, hand-coded HTML &amp; CSS</li>
-              <li>Contact form &amp; click-to-call buttons</li>
-              <li>Google Maps embed &amp; business info</li>
-              <li>SEO-friendly page titles and structure</li>
-              <li>You own the finished site outright</li>
-            </ul>
-            <p class="price">from $1,200</p>
-            <p class="muted">Typical timeline: 2–3 weeks</p>
-          </div>
-          <div class="card">
-            <h3>Website Redesigns</h3>
-            <p>An outdated website can make it harder for customers to find what they need. I rebuild it from scratch: keep what works, fix everything that doesn't.</p>
-            <ul>
-              <li>Full audit of your current site first</li>
-              <li>Complete rebuild — modern, mobile-first</li>
-              <li>Your existing content migrated for you</li>
-              <li>Redirect planning to help preserve existing URLs</li>
-              <li>Same speed &amp; SEO standards as new builds</li>
-              <li>You own the finished site outright</li>
-            </ul>
-            <p class="price">from $900</p>
-            <p class="muted">Typical timeline: 2–4 weeks</p>
-          </div>
-          <div class="card">
-            <h3>Care Plans</h3>
-            <p>Websites go stale. Menus change, hours change, photos age. A care plan keeps yours current without you ever touching code.</p>
-            <ul>
-              <li>Unlimited small edits &amp; updates</li>
-              <li>Hosting &amp; uptime monitoring included</li>
-              <li>Monthly backups</li>
-              <li>Priority support — 24–48 hr turnaround</li>
-              <li>Small design tweaks as your business evolves</li>
-              <li>Terms and cancellation policy agreed before signup</li>
-            </ul>
-            <p class="price">$150/mo</p>
-            <p class="muted">Ongoing support; terms set by agreement</p>
-          </div>
+        <div class="sub-section__intro"><span class="sub-eyebrow">01 / WHAT I DO</span><h2 id="service-list-heading">Choose what fits your business.</h2><p>No need to pay for features you won't use.</p></div>
+        <div class="service-list">
+          <article class="service-row" id="new-website">
+            <div class="service-row__lead"><span class="service-row__number">01 / BUILD</span><h3>Custom Business Websites</h3><p>A sharp five-page business site that makes your services easy to understand and your business easy to contact.</p><span class="service-row__price">Starting at $1,200</span></div>
+            <div class="service-row__details"><h4>WHAT'S INCLUDED</h4><ul class="check-list"><li>Custom design tailored to your business</li><li>Five core pages, built for phones and desktop</li><li>Contact form and click-to-call links</li><li>Business details, location and maps where useful</li><li>Search-friendly structure and page titles</li><li>Ownership of the completed site after final payment</li></ul><a class="text-action" href="contact.html">Discuss a new website <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="service-row" id="redesign">
+            <div class="service-row__lead"><span class="service-row__number">02 / REFRESH</span><h3>Website Redesigns</h3><p>Keep what's working. Improve what isn't. Give customers a smoother experience, especially on mobile.</p><span class="service-row__price">Starting at $900</span></div>
+            <div class="service-row__details"><h4>WHAT'S INCLUDED</h4><ul class="check-list"><li>Review of your existing website</li><li>Cleaner, mobile-friendly layouts</li><li>Existing content migrated as agreed</li><li>Navigation and content structure improvements</li><li>Review of links and redirects when needed</li><li>Testing before the updated site launches</li></ul><a class="text-action" href="contact.html">Discuss a redesign <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="service-row" id="care">
+            <div class="service-row__lead"><span class="service-row__number">03 / SUPPORT</span><h3>Care Plans &amp; Updates</h3><p>Keep your website current while you focus on the day-to-day work of running your business.</p><span class="service-row__price">$150 / month</span></div>
+            <div class="service-row__details"><h4>WHAT'S INCLUDED</h4><ul class="check-list"><li>Hosting and website monitoring</li><li>Routine content and image updates</li><li>Small ongoing design adjustments</li><li>Site backups and basic maintenance</li><li>A direct contact for support requests</li><li>Clear agreement on scope and turnaround</li></ul><a class="text-action" href="pricing.html">See plans and pricing <span aria-hidden="true">↗</span></a></div>
+          </article>
         </div>
       </div>
     </section>
-
-    <!-- Process -->
-    <section class="section section--tight">
+    <section class="sub-section sub-section--contrast" aria-labelledby="services-process-heading">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Process</span>
-          <h2>How it works</h2>
-          <p class="lead">Simple enough to explain in four steps. No black box.</p>
-        </div>
-        <div class="steps" style="max-width: 720px;">
-          <div class="step">
-            <h3>Call</h3>
-            <p>A 20-minute conversation about your business and what you need. You'll fill out a short questionnaire first so we skip the small talk and get to the point.</p>
-          </div>
-          <div class="step">
-            <h3>Design</h3>
-            <p>I outline the visual direction, content needs and page structure, then gather your feedback before building.</p>
-          </div>
-          <div class="step">
-            <h3>Build</h3>
-            <p>I build your responsive pages and share a preview for review before launch.</p>
-          </div>
-          <div class="step">
-            <h3>Launch</h3>
-            <p>We point your domain at the new site, test everything, and go live. Then a short walkthrough so you know exactly what you have — and what happens next.</p>
-          </div>
-        </div>
+        <div class="sub-section__intro"><span class="sub-eyebrow">02 / THE PROCESS</span><h2 id="services-process-heading">From first call to launch.</h2><p>Four straightforward stages. You'll know where your project stands.</p></div>
+        <ol class="sub-timeline sub-timeline--four">
+          <li><span class="sub-timeline__num">01</span><h3>Connect</h3><p>We discuss your business, goals, and project requirements.</p></li>
+          <li><span class="sub-timeline__num">02</span><h3>Design</h3><p>I propose a direction and refine it with your feedback.</p></li>
+          <li><span class="sub-timeline__num">03</span><h3>Build</h3><p>I develop the site and share it for review before launch.</p></li>
+          <li><span class="sub-timeline__num">04</span><h3>Launch</h3><p>We test the final pages and agree on the handoff or support plan.</p></li>
+        </ol>
       </div>
     </section>
-
-    <!-- Final CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <h2>Not sure which one fits?</h2>
-          <p>Describe your situation and I'll tell you straight — even if the answer is "you don't need me yet."</p>
-          <a class="btn btn-primary" href="contact.html">Get a free quote</a>
-        </div>
-      </div>
-    </section>
+    <section class="sub-section sub-section--cta"><div class="container"><div class="cta-band"><div class="cta-band__eyebrow">HAVE SOMETHING IN MIND?</div><h2>Let's make your next website count.</h2><p>Tell me where you want to take your business online.</p><a class="btn btn-primary" href="contact.html">Get a free quote <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <p class="footer-brand">H<span>B</span> Web Design</p>
-          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+          <p class="footer-brand">H<span>B</span><span class="footer-brand-divider" aria-hidden="true"> |</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working with businesses nationwide.</p>
         </div>
         <div>
           <h3>Pages</h3>
@@ -169,7 +112,6 @@
       </div>
     </div>
   </footer>
-
   <script src="main.js"></script>
 </body>
 </html>

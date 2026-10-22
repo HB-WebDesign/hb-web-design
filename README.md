@@ -1,48 +1,125 @@
-# HB Web Design
+# HB | Web Design
 
-Static website for HB Web Design, built with **HTML, CSS and vanilla JavaScript**. No build system is required.
+**Small Business Web Design, Built To Make An Impact.**
 
-## Preview locally
+A custom-built website for **HB Web Design**, an independent web design studio based in Durham, North Carolina, working with small businesses nationwide.
 
-Open `index.html` with VS Code Live Server, or run `python -m http.server 5500` from the project directory and visit http://localhost:5500.
+The goal is simple: help small businesses establish a professional online presence with clear messaging, mobile-friendly layouts, and an easy way for customers to get in touch.
+
+> **Project status:** In development. The V18 homepage serves as the design foundation, with V19 styling carried across the remaining pages. Content and integrations are being refined before launch.
+
+## About the project
+
+This website is designed and developed with **HTML, CSS, and vanilla JavaScript**—no React, page builders, or CSS frameworks.
+
+Its visual direction combines a minimal, modern agency layout with subtle retro-tech details:
+
+- Near-black and charcoal surfaces with white and light-gray text
+- Deep-red (`#6e0505`) highlight boxes and stronger red (`#ac0404`) accents
+- Bold typography, numbered sections, and understated grid details
+- Responsive layouts, accessible navigation, and restrained hover effects
+- A consistent **HB | Web Design** text identity, with the **B** and divider in red
 
 ## Pages
 
-- `index.html` — home
-- `services.html` — services
-- `work.html` — project concepts (not client case studies)
-- `pricing.html` — indicative pricing; confirm business terms before launch
-- `about.html` — background
-- `contact.html` — contact form **disabled until configured**
-- `styles.css` — design system and responsive styles
-- `main.js` — theme, navigation and form enhancements
+| Page                           | Purpose                                                                                                     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| **Home** (`index.html`)        | Studio introduction, key benefits, services, featured concepts, pricing overview, and project inquiry links |
+| **Services** (`services.html`) | Custom website builds, redesigns, care plans, and the development process                                   |
+| **Work** (`work.html`)         | Portfolio concept showcases; these are labeled as concepts, **not completed client projects**               |
+| **Pricing** (`pricing.html`)   | One-time projects, monthly plans, and frequently asked questions                                            |
+| **About** (`about.html`)       | Introduction to Hector Barahona, his approach, and his portrait                                             |
+| **Contact** (`contact.html`)   | Project inquiry form and an outline of what happens next                                                    |
 
-## Before publishing
+## Built with
 
-- [ ] Configure a working form endpoint, test submission and remove the disabled state/status text
-- [ ] Add real business contact information and consider a privacy policy
-- [ ] Verify pricing, ownership terms, revision limits, cancellation terms and response-time promises
-- [ ] Add actual project previews and replace concept placeholders after building demos
-- [ ] Supply and verify `assets/favicon.png` and `assets/mascot.png`, or remove those references
-- [ ] Test keyboard/mobile navigation, performance and accessibility in browsers
-- [ ] Review all external font and form-provider privacy implications
+- **HTML5** — semantic page structure and content
+- **CSS3** — layout, responsive design, theming, and interactions
+- **Vanilla JavaScript** — theme switching, mobile navigation, and small UI enhancements
+- **Google Fonts** — typography loaded by the stylesheet
 
-## Light graphite visual refresh
+No package manager, build tool, or JavaScript dependencies are required to preview the site.
 
-Shared branding and hover treatments live in `styles.css`. The hero watermark uses `assets/mascot.png`, which you must supply locally in the repository for it to appear in either theme. Keep existing contact placeholders until business details are finalized.
+## Project structure
 
-## V3 design updates
+```text
+hb-web-design/
+├── index.html
+├── services.html
+├── work.html
+├── pricing.html
+├── about.html
+├── contact.html
+├── styles.css
+├── main.js
+├── README.md
+└── assets/
+    ├── portrait.jpg       # Photo used on Home and About
+    └── ...                # Other local assets, such as the site favicon
+```
 
-- CSS-only browser preview on the homepage (illustrative concept, not a client project).
-- Graph-paper grid restricted to hero and selected process sections.
-- Removed the decorative mascot watermark/target from hero pages.
-- Clearer headline and service cards; no frameworks or new dependencies.
-- Reduced-motion support retained.
-- Keep existing `assets/` folder. Contact placeholders and work concepts remain intentionally unfinished.
+The actual contents of `assets/` may differ; keep any images or icons referenced by the pages.
 
+## Run locally
 
-## Logo image
-The homepage displays the same `assets/mascot.png` artwork in both light and dark themes. Keep your original transparent logo file under that path (the assets directory is not included here). The previous CSS browser preview and radial/target watermark have been removed.
+1. Clone the repository:
 
+   ```bash
+   git clone https://github.com/HB-WebDesign/hb-web-design.git
+   cd hb-web-design
+   ```
 
-Version 5: Hero mascot is displayed at full opacity, without filters or entrance fading, with a calmer backdrop in both themes. Keep `assets/mascot.png` locally.
+2. Open the folder in **Visual Studio Code**.
+3. Open `index.html` using the **Live Server** extension.
+
+Alternatively, if you have Python installed, run a local static server from the project folder:
+
+```bash
+python -m http.server 5500
+```
+
+Then visit **http://localhost:5500** in your browser.
+
+There is no `npm install` or build step.
+
+## Design and functionality
+
+### Theme system
+
+The website supports dark and light modes. Dark mode is the default for new visitors; the selected theme is remembered using the browser's `localStorage` under the key `hb-theme`.
+
+### Responsive design
+
+Layouts adapt to desktop and mobile screen sizes, including a collapsible mobile navigation menu. CSS accounts for users who prefer reduced motion.
+
+### Shared styling
+
+All pages load `styles.css`. The homepage is the reference for the site's typography, red buttons and accents, spacing, and overall visual language.
+
+### Branding
+
+The primary identity is **HB | Web Design**. The **B** and vertical divider are red. The decorative mascot watermark is no longer part of the homepage design.
+
+## Before launching
+
+The project is still being prepared for public use. Check the following before deploying:
+
+- [ ] **Contact form:** Replace `YOUR_FORM_ID` in `contact.html` with a real Formspree form ID (or connect another form service), then test submissions.
+- [ ] **Contact details:** Replace the sample email address and phone number in `contact.html` with approved business contact information.
+- [ ] **Portfolio:** Replace concept placeholders with finished projects and screenshots when available; keep concept work accurately labeled.
+- [ ] **Images:** Confirm `assets/portrait.jpg` and any favicon or other referenced assets exist and load correctly.
+- [ ] **Content and pricing:** Review service details, package terms, and calls to action for accuracy.
+- [ ] **Quality checks:** Test navigation, forms, mobile layouts, keyboard accessibility, contrast, and both color themes.
+- [ ] **Deployment:** Configure the hosting platform and domain when ready.
+
+## Current development focus
+
+The current work is a site-wide design pass followed by individual refinement of **Services, Work, Pricing, About, and Contact**. The completed V18 homepage is being preserved as the visual reference.
+
+## Repository
+
+[HB-WebDesign / hb-web-design](https://github.com/HB-WebDesign/hb-web-design)
+
+---
+
+**Designed and developed by Hector Barahona · HB | Web Design**

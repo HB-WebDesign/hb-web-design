@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — HB Web Design</title>
-  <meta name="description" content="Meet Hector, the developer behind HB Web Design — hand-coded websites for small businesses in the Bay Area, New Orleans, and Durham.">
+  <meta name="description" content="Meet Hector Barahona, the founder and developer behind HB Web Design, based in Durham and working nationwide.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
       var saved = null;
       try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', saved || 'dark');
     })();
   </script>
 </head>
-<body>
+<body class="site-subpage subpage--about">
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html" aria-label="HB Web Design — Home"><span class="brand-mark" aria-hidden="true">H<span>B</span></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-name">Web Design</span></a>
@@ -28,85 +26,61 @@
         <a class="nav-link" href="services.html">Services</a>
         <a class="nav-link" href="work.html">Work</a>
         <a class="nav-link" href="pricing.html">Pricing</a>
-        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link active" href="about.html" aria-current="page">About</a>
         <a class="nav-link" href="contact.html">Contact</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme">◐</button>
         <a class="btn btn-primary" href="contact.html">Get a quote</a>
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <!-- Page hero -->
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow">About</span>
-        <h1>The person behind the pixels.</h1>
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container page-hero__layout">
+        <div>
+          <p class="page-kicker"><span class="page-kicker__square" aria-hidden="true"></span> 04 / ABOUT</p>
+          <h1 id="page-heading">The person behind<br><span class="headline-rule">the pixels.</span></h1>
+          <p class="page-hero__lead">An independent studio means you work with the person who designs and develops your website.</p>
+        </div>
+        <aside class="page-hero__aside" aria-label="Page introduction">
+          <span class="page-hero__aside-line" aria-hidden="true"></span>
+          <strong>INDEPENDENT BY DESIGN</strong>
+          <p>Small-business websites, built with care and without layers of handoffs.</p>
+        </aside>
       </div>
     </section>
-
-    <!-- Bio -->
-    <section class="section section--tight">
-      <div class="container">
-        <div class="grid grid--2" style="align-items: start; gap: 3rem;">
-          <div>
-            <div class="about-portrait reveal">
-              <img src="assets/portrait.jpg" alt="Hector Barahona, founder of HB Web Design" width="640" height="800" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div>
-            <h2>Hey, I'm Hector.</h2>
-            <p>I'm a front-end developer, and HB Web Design is my shop — HB are my initials, and the skull is just what happens when you let a Stephen King reader design a logo.</p>
-            <p>I've lived and worked in the Bay Area, New Orleans, and Durham. Living in different communities showed me how much local businesses depend on a clear online presence—and how hard it can be to know what you actually need from a website.</p>
-            <p>I started HB Web Design to offer a direct, collaborative approach: thoughtful design, lean code, and honest conversations about scope and cost. You work with me throughout the project.</p>
-            <p>If that sounds like someone you want building your website, <a href="contact.html">let's talk</a>.</p>
-          </div>
+    <section class="sub-section" aria-labelledby="about-bio-heading">
+      <div class="container about-layout">
+        <figure class="about-photo">
+          <img src="assets/portrait.jpg" width="600" height="750" alt="Portrait of Hector Barahona, owner and developer at HB Web Design" loading="eager" decoding="async">
+          <figcaption><span class="about-photo__label">THE PERSON BEHIND HB</span><strong>Hector Barahona</strong><span>Owner / Developer</span></figcaption>
+        </figure>
+        <div class="about-copy"><span class="sub-eyebrow">01 / INTRODUCTION</span><h2 id="about-bio-heading">Hey, I'm Hector.</h2>
+          <p>I’m the developer behind HB Web Design. I build custom websites for small businesses that want a clearer, more professional presence online.</p>
+          <p>My path has taken me from the Bay Area to New Orleans and now North Carolina. Living and working in different communities has given me an appreciation for independent businesses and the people running them.</p>
+          <p>I started HB Web Design because I enjoy the combination of design, problem-solving, and development. I like building things from the ground up and making them simple for people to use.</p>
+          <p>When you work with HB, you work directly with me — from our first conversation through design, development, and launch.</p>
+          <a href="contact.html" class="text-action">Let's talk about your website <span aria-hidden="true">↗</span></a>
+          <div class="about-copy__note"><span class="note-square" aria-hidden="true"></span> BASED IN DURHAM, NC <span aria-hidden="true">//</span> WORKING NATIONWIDE</div>
         </div>
       </div>
     </section>
-
-    <!-- How I work -->
-    <section class="section section--tight">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">How I work</span>
-          <h2>A few things I believe</h2>
-        </div>
-        <div class="grid grid--3">
-          <div class="card">
-            <h3>Speed is a feature</h3>
-            <p>Half your visitors are on phones, many on mediocre connections. Speed matters, so I keep assets and dependencies intentional and test on real screen sizes.</p>
-          </div>
-          <div class="card">
-            <h3>Honest scoping</h3>
-            <p>I'll tell you what you need and what you don't. I’ll recommend a scope that fits your goals rather than adding features you don’t need. If I'm not the right fit, I'll say that too.</p>
-          </div>
-          <div class="card">
-            <h3>You own everything</h3>
-            <p>We’ll agree on ownership, hosting, ongoing support, and how files are handed over before the project starts.</p>
-          </div>
+    <section class="sub-section sub-section--contrast" aria-labelledby="about-principles-heading">
+      <div class="container"><div class="sub-section__intro"><span class="sub-eyebrow">02 / HOW I WORK</span><h2 id="about-principles-heading">A few things I believe.</h2><p>A simple approach to thoughtful web design.</p></div>
+        <div class="principle-grid">
+          <article><span class="principle-grid__num">01 / CLARITY</span><h3>Make it easy to use.</h3><p>Customers should be able to understand what you do and find what they need without digging.</p></article>
+          <article><span class="principle-grid__num">02 / TRANSPARENCY</span><h3>Be clear about the work.</h3><p>Scope, pricing, and project expectations should be understood before the build starts.</p></article>
+          <article><span class="principle-grid__num">03 / OWNERSHIP</span><h3>Build for the long term.</h3><p>Clean code and understandable handover make a website easier to maintain and update.</p></article>
         </div>
       </div>
     </section>
-
-    <!-- Final CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <h2>Let's see if we're a fit.</h2>
-          <p>One conversation, zero pressure — I’ll get back to you as soon as I can.</p>
-          <a class="btn btn-primary" href="contact.html">Get in touch</a>
-        </div>
-      </div>
-    </section>
+    <section class="sub-section sub-section--cta"><div class="container"><div class="cta-band"><div class="cta-band__eyebrow">HAVE SOMETHING IN MIND?</div><h2>Let's make your next website count.</h2><p>Tell me where you want to take your business online.</p><a class="btn btn-primary" href="contact.html">Get a free quote <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <p class="footer-brand">H<span>B</span> Web Design</p>
-          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+          <p class="footer-brand">H<span>B</span><span class="footer-brand-divider" aria-hidden="true"> |</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working with businesses nationwide.</p>
         </div>
         <div>
           <h3>Pages</h3>
@@ -133,7 +107,6 @@
       </div>
     </div>
   </footer>
-
   <script src="main.js"></script>
 </body>
 </html>

@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work — HB Web Design</title>
-  <meta name="description" content="Portfolio of HB Web Design: concept and client website projects for restaurants, contractors, gyms, and local small businesses.">
+  <meta name="description" content="Explore small-business website concepts from HB Web Design, including restaurant, contractor, and fitness projects.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () {
       var saved = null;
       try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', saved || 'dark');
     })();
   </script>
 </head>
-<body>
+<body class="site-subpage subpage--work">
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html" aria-label="HB Web Design — Home"><span class="brand-mark" aria-hidden="true">H<span>B</span></span><span class="brand-divider" aria-hidden="true"></span><span class="brand-name">Web Design</span></a>
@@ -26,7 +24,7 @@
       <nav class="nav" id="primary-navigation" aria-label="Main navigation">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="services.html">Services</a>
-        <a class="nav-link active" href="work.html">Work</a>
+        <a class="nav-link active" href="work.html" aria-current="page">Work</a>
         <a class="nav-link" href="pricing.html">Pricing</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="contact.html">Contact</a>
@@ -35,102 +33,49 @@
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <!-- Page hero -->
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Work</span>
-        <h1>Websites built around real goals.</h1>
-        <p class="lead">These are ideas for future concept projects—not shipped client websites or working demos. I’ll replace them with screenshots and case studies as projects are completed.</p>
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container page-hero__layout">
+        <div>
+          <p class="page-kicker"><span class="page-kicker__square" aria-hidden="true"></span> 02 / WORK</p>
+          <h1 id="page-heading">Ideas with<br><span class="headline-rule">a purpose.</span></h1>
+          <p class="page-hero__lead">A closer look at three types of small-business websites I want to build. Each is a concept, not a completed client project.</p>
+        </div>
+        <aside class="page-hero__aside" aria-label="Page introduction">
+          <span class="page-hero__aside-line" aria-hidden="true"></span>
+          <strong>GOOD DESIGN HAS A JOB</strong>
+          <p>Every layout should help visitors find information and take the next step.</p>
+        </aside>
       </div>
     </section>
-
-    <!-- Projects -->
-    <section class="section section--tight">
+    <section class="sub-section" aria-labelledby="work-heading">
       <div class="container">
-        <div class="grid" style="gap: 2.5rem;">
-
-          <article class="work-card">
-            <div class="work-media">Restaurant concept · Preview coming soon</div>
-            <div class="work-body">
-              <span class="badge">Concept project</span>
-              <h3>Neighborhood Restaurant</h3>
-              <p><strong>The problem:</strong> most restaurant sites bury the menu three clicks deep and look broken on phones — exactly where hungry customers are browsing.</p>
-              <p><strong>Design direction:</strong> a menu-forward site where hours, location, and the full menu are one tap away. Online reservations up top, click-to-call on every screen, photos that actually make the food look good.</p>
-              <ul style="list-style: none; margin-top: 1rem;">
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ One-tap menu, hours &amp; directions</li>
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Space for a reservation integration</li>
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Performance-conscious design</li>
-              </ul>
-            </div>
+        <div class="sub-section__intro"><span class="sub-eyebrow">01 / PROJECT CONCEPTS</span><h2 id="work-heading">Built around real business needs.</h2><p>These are project directions, not finished client work. Visual previews can be added as projects are completed.</p></div>
+        <div class="portfolio-stack">
+          <article class="portfolio-feature">
+            <div class="portfolio-feature__visual portfolio-feature__visual--restaurant"><span class="concept-label">CONCEPT / 001</span><span class="concept-glyph" aria-hidden="true">01</span><div class="concept-caption"><span>RESTAURANT WEBSITE</span><strong>Menu. Hours.<br>Reservations.</strong></div><span class="concept-corner" aria-hidden="true">↗</span></div>
+            <div class="portfolio-feature__body"><span class="sub-eyebrow">01 / FOOD &amp; HOSPITALITY</span><h3>Neighborhood Restaurant</h3><p>A menu-first concept for customers who want hours, directions, and a quick way to book a table.</p><p class="portfolio-label">DESIGN DIRECTION</p><ul class="editorial-list"><li>Prominent menu and business hours</li><li>Mobile-friendly reservations and calling</li><li>Photos and location details that are easy to find</li></ul><span class="portfolio-status">CONCEPT ONLY — PREVIEW COMING LATER</span></div>
           </article>
-
-          <article class="work-card">
-            <div class="work-media">Contractor concept · Preview coming soon</div>
-            <div class="work-body">
-              <span class="badge">Concept project</span>
-              <h3>Home Contractor</h3>
-              <p><strong>The problem:</strong> contractors live on referrals because their websites don't generate leads — no service pages, no proof of work, no easy way to request a quote.</p>
-              <p><strong>Design direction:</strong> a lead machine. Dedicated page per service (kitchens, baths, additions), a project gallery that sells the craftsmanship, and quote-request forms placed where interest peaks.</p>
-              <ul style="list-style: none; margin-top: 1rem;">
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Service pages built to rank on Google</li>
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Before/after project gallery</li>
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Quote forms that feed straight to email</li>
-              </ul>
-            </div>
+          <article class="portfolio-feature">
+            <div class="portfolio-feature__visual portfolio-feature__visual--contractor"><span class="concept-label">CONCEPT / 002</span><span class="concept-glyph" aria-hidden="true">02</span><div class="concept-caption"><span>CONTRACTOR WEBSITE</span><strong>Show the work.<br>Earn the call.</strong></div><span class="concept-corner" aria-hidden="true">↗</span></div>
+            <div class="portfolio-feature__body"><span class="sub-eyebrow">02 / LOCAL SERVICES</span><h3>Home Contractor</h3><p>A service-focused concept that lets visitors understand the work, browse examples, and request an estimate.</p><p class="portfolio-label">DESIGN DIRECTION</p><ul class="editorial-list"><li>Focused pages for individual services</li><li>Project gallery and before/after sections</li><li>Quote-request forms with clear next steps</li></ul><span class="portfolio-status">CONCEPT ONLY — PREVIEW COMING LATER</span></div>
           </article>
-
-          <article class="work-card">
-            <div class="work-media">Fitness concept · Preview coming soon</div>
-            <div class="work-body">
-              <span class="badge">Concept project</span>
-              <h3>Local Gym</h3>
-              <p><strong>The problem:</strong> gym sites read like brochures when they should read like invitations — class times hidden in PDFs, no clear path from "interested" to "signed up."</p>
-              <p><strong>Design direction:</strong> a site with one job: trial signups. Class schedule front and center, trainer bios with real personality, and a free-trial flow that's three fields and done.</p>
-              <ul style="list-style: none; margin-top: 1rem;">
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Class schedule presentation</li>
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Clear trial inquiry form</li>
-                <li style="padding: 0.4rem 0; color: var(--muted); border-top: 1px solid var(--border);">✓ Trainer bios that build trust</li>
-              </ul>
-            </div>
+          <article class="portfolio-feature">
+            <div class="portfolio-feature__visual portfolio-feature__visual--gym"><span class="concept-label">CONCEPT / 003</span><span class="concept-glyph" aria-hidden="true">03</span><div class="concept-caption"><span>FITNESS WEBSITE</span><strong>Find a class.<br>Get started.</strong></div><span class="concept-corner" aria-hidden="true">↗</span></div>
+            <div class="portfolio-feature__body"><span class="sub-eyebrow">03 / HEALTH &amp; FITNESS</span><h3>Local Gym</h3><p>A welcoming concept that makes schedules and memberships approachable for first-time visitors.</p><p class="portfolio-label">DESIGN DIRECTION</p><ul class="editorial-list"><li>Easy-to-read class schedule</li><li>Trainer introductions and facility information</li><li>Simple trial or membership inquiry</li></ul><span class="portfolio-status">CONCEPT ONLY — PREVIEW COMING LATER</span></div>
           </article>
-
         </div>
       </div>
     </section>
-
-    <!-- Note -->
-    <section class="section section--tight">
-      <div class="container" style="max-width: 720px;">
-        <div class="card text-center">
-          <h3>Your project could be next.</h3>
-          <p class="muted">These concepts show the type of work I want to do. Your project will be planned around your goals — designed around the one action that grows your business, not around looking pretty in a portfolio.</p>
-          <div class="mt-1">
-            <a class="btn btn-primary" href="contact.html">Start your project</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <h2>Like what you see?</h2>
-          <p>Tell me about your business — I’ll get back to you as soon as I can.</p>
-          <a class="btn btn-primary" href="contact.html">Get a free quote</a>
-        </div>
-      </div>
-    </section>
+    <section class="sub-section sub-section--contrast"><div class="container portfolio-bottom"><span class="sub-eyebrow">02 / YOUR NEXT PROJECT</span><h2>Your business could be next.</h2><p>Have a business that needs its own space on the web? Let's plan a site around what your customers actually need.</p><a href="contact.html" class="btn btn-primary">Start your project <span aria-hidden="true">↗</span></a></div></section>
+    <section class="sub-section sub-section--cta"><div class="container"><div class="cta-band"><div class="cta-band__eyebrow">HAVE SOMETHING IN MIND?</div><h2>Let's make your next website count.</h2><p>Tell me where you want to take your business online.</p><a class="btn btn-primary" href="contact.html">Get a free quote <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <p class="footer-brand">H<span>B</span> Web Design</p>
-          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working remotely.</p>
+          <p class="footer-brand">H<span>B</span><span class="footer-brand-divider" aria-hidden="true"> |</span> Web Design</p>
+          <p>Thoughtful, hand-coded websites for small businesses. Based in Durham, NC; working with businesses nationwide.</p>
         </div>
         <div>
           <h3>Pages</h3>
@@ -157,7 +102,6 @@
       </div>
     </div>
   </footer>
-
   <script src="main.js"></script>
 </body>
 </html>
