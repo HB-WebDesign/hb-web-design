@@ -1212,3 +1212,83 @@ main > .section:not(.section--services):not(.section--quiet):not(.section--grid)
 .offer-benefit--highlight h3,
 .offer-benefit--highlight p,
 .offer-benefit--highlight .benefit-symbol {color:#fff!important;}
+
+
+/* ============================================================
+   V18 | HOMEPAGE POLISH — typography, rhythm, editorial lists,
+   stronger interactions and a three-step timeline.
+   Scoped to .home-v18; other site pages remain unchanged.
+   ============================================================ */
+.home-v18 { --font-display: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+.home-v18 h1,.home-v18 h2,.home-v18 h3 {font-family:var(--font-display);font-weight:750;letter-spacing:-.045em;}
+.home-v18 .hero--studio h1 {font-size:clamp(3.15rem,6.25vw,5.7rem);line-height:1.07;letter-spacing:-.065em;max-width:18ch;}
+.home-v18 .hero--studio h1::before {width:48px;height:3px;border-radius:0;background:var(--bright-red-stroke);}
+.home-v18 .hero--studio .hero-accent {padding:.02em .17em .07em;line-height:1.19;}
+.home-v18 .hero--studio .lead {max-width:49ch;line-height:1.65;font-size:clamp(1.05rem,1.6vw,1.23rem);}
+.home-v18 .studio-service-areas {font-weight:600;letter-spacing:.006em;}
+.home-v18 .hero-capabilities {gap:clamp(12px,1.8vw,20px);margin-top:clamp(3rem,5vw,4.5rem);}
+.home-v18 .capability-card {border-radius:3px;min-height:195px;padding:1.4rem;transform:none;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;}
+.home-v18 .capability-card:hover,.home-v18 .capability-card:focus-visible {transform:translateY(-4px);box-shadow:5px 5px 0 var(--bright-red-stroke);}
+.home-v18 .capability-symbol {transition:transform .25s ease;}
+.home-v18 .capability-card:hover .capability-symbol,.home-v18 .capability-card:focus-visible .capability-symbol {transform:translate(2px,-2px);}
+.home-v18 .btn {border-radius:2px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-weight:700;}
+.home-v18 .btn-primary {background:#6e0505;color:white;border-color:#ac0404;box-shadow:4px 4px 0 #ac0404;}
+.home-v18 .btn-primary:hover,.home-v18 .btn-primary:focus-visible {background:#890707;color:white;transform:translate(-2px,-2px);box-shadow:6px 6px 0 #ac0404;}
+.home-v18 .btn-secondary {background:transparent;border-color:var(--grey-stroke);}
+.home-v18 .btn-secondary:hover {background:var(--red-transparency);}
+.home-v18 .trust-strip--minimal {background:var(--dark-black);border-color:var(--dark-grey-stroke);box-shadow:none;}
+.home-v18 .trust-strip--minimal .container {padding-top:1.55rem;padding-bottom:1.55rem;gap:2rem;}
+.home-v18 .trust-strip--minimal .trust-item {border-left:3px solid var(--red-stroke);padding-left:1.15rem;}
+.home-v18 .trust-strip--minimal .trust-item strong {font:750 1.1rem var(--font-display);color:#fff;letter-spacing:-.03em;}
+.home-v18 .trust-strip--minimal .trust-item span {color:#dbdbdb;font-size:.85rem;}
+/* Founder offer: six points as a calm editorial list, not six more cards. */
+.home-v18 .founder-offer {padding-block:clamp(4.7rem,8vw,7rem);background:var(--surface-2);}
+.home-v18 .founder-offer-content h2 {font-size:clamp(2.3rem,4.1vw,3.6rem);max-width:18ch;line-height:1.11;}
+.home-v18 .founder-offer-content h2 em {color:var(--text);text-decoration-color:var(--bright-red-stroke);}
+.home-v18 .offer-benefits {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.8rem;margin:1.7rem 0 2.2rem;}
+.home-v18 .offer-benefit,.home-v18 .offer-benefit--highlight {background:none!important;border:0;border-top:1px solid var(--border);border-radius:0;box-shadow:none;padding:1.2rem 0 1.35rem;transform:none;grid-template-columns:2rem 1fr;}
+.home-v18 .offer-benefit:hover {border-top-color:var(--bright-red-stroke);transform:none;}
+.home-v18 .offer-benefit h3,.home-v18 .offer-benefit--highlight h3 {font-size:1.02rem;color:var(--text)!important;margin:0 0 .35rem;}
+.home-v18 .offer-benefit p,.home-v18 .offer-benefit--highlight p {color:var(--muted)!important;font-size:.89rem;line-height:1.65;}
+.home-v18 .benefit-symbol,.home-v18 .offer-benefit--highlight .benefit-symbol {display:inline-grid;place-items:center;width:27px;height:27px;background:#6e0505;color:#fff!important;border:1px solid #ac0404;padding:0;font-size:.69rem;border-radius:2px;}
+.home-v18 .owner-profile {border-radius:3px;}
+/* Services: generous text-led cards, less decorative noise. */
+.home-v18 .section--services {background:var(--bg);}
+.home-v18 .service-grid--editorial .card {border:1px solid var(--border);border-top:3px solid var(--red-stroke);border-radius:3px;box-shadow:none;padding:clamp(1.5rem,2.5vw,2.4rem);}
+.home-v18 .service-grid--editorial .card:hover {border-top-color:var(--bright-red-stroke);box-shadow:5px 5px 0 var(--red-stroke);transform:translateY(-3px);}
+.home-v18 .service-grid--editorial .service-icon {width:44px;height:44px;background:#6e0505;color:#fff;box-shadow:none;border-radius:2px;}
+.home-v18 .service-grid--editorial .card h3 {font-size:1.28rem;line-height:1.25;letter-spacing:-.035em;}
+.home-v18 .service-grid--editorial .card .price {font:750 1.3rem var(--font-display);letter-spacing:-.035em;}
+/* Work remains clearly labeled as concepts; different card silhouette. */
+.home-v18 .section--quiet {background:var(--surface-2);}
+.home-v18 .work-card {border-radius:3px;box-shadow:none;}
+.home-v18 .work-card .work-media {border-bottom:2px solid var(--red-stroke);min-height:155px;}
+.home-v18 .work-card .work-body h3 {font-size:1.16rem;}
+/* Pricing comparison: two contained columns with one featured edge. */
+.home-v18 .pricing-compare {max-width:830px;margin:0 auto;gap:1.1rem;}
+.home-v18 .pricing-option {padding:2.2rem 1.75rem;border:1px solid var(--border);border-radius:3px;box-shadow:none;}
+.home-v18 .pricing-option:first-child {border-top:4px solid var(--bright-red-stroke);}
+.home-v18 .pricing-option:last-child {border-top:4px solid var(--dark-grey-stroke);}
+.home-v18 .pricing-option h3 {font-size:1.22rem;}
+.home-v18 .pricing-option .price {font:750 clamp(1.8rem,3vw,2.6rem) var(--font-display);color:var(--text);letter-spacing:-.045em;}
+/* True timeline in place of another three-card grid. */
+.home-v18 .section--grid {background-color:var(--dark-black);background-image:none;}
+.home-v18 .process-timeline {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;list-style:none;margin:2.4rem 0 0;padding:0;counter-reset:none;}
+.home-v18 .process-step {position:relative;padding:2rem 1.7rem 1.6rem 0;border-top:2px solid var(--dark-grey-stroke);transition:border-color .2s ease;}
+.home-v18 .process-step:not(:last-child) {margin-right:1.5rem;}
+.home-v18 .process-step::before {content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;background:#6e0505;border:2px solid #ac0404;}
+.home-v18 .process-step:hover {border-top-color:var(--bright-red-stroke);}
+.home-v18 .process-count {display:block;color:#fff;font:800 clamp(2.2rem,4vw,3.6rem)/1 var(--font-display);letter-spacing:-.065em;margin-bottom:1.4rem;}
+.home-v18 .process-step h3 {font-size:1.23rem;color:#fff;margin-bottom:.75rem;}
+.home-v18 .process-step p {color:#dbdbdb;max-width:33ch;font-size:.92rem;line-height:1.7;}
+.home-v18 .section--grid .section-head h2 {color:#fff;}
+.home-v18 .section--grid .section-head .lead {color:#dbdbdb;}
+.home-v18 .cta-band {background:#6e0505;background-image:none;border-radius:3px;border:1px solid #ac0404;}
+.home-v18 .cta-band h2 {font-size:clamp(2.1rem,4vw,3.3rem);max-width:19ch;margin:0 auto 1rem;}
+.home-v18 .cta-band .btn-primary {background:white;color:#6e0505;border-color:white;box-shadow:4px 4px 0 #ac0404;}
+.home-v18 .cta-band .btn-primary:hover {background:#eee;color:#6e0505;}
+.home-v18 main > .section {padding-block:clamp(4.5rem,7vw,6.7rem);}
+.home-v18 .section-head h2 {font-size:clamp(2.2rem,3.6vw,3.3rem);}
+@media(max-width:850px) {.home-v18 .process-timeline {grid-template-columns:1fr;}.home-v18 .process-step {margin-right:0!important;padding:1.5rem 0 1.5rem 3.8rem;border-top:0;border-left:2px solid var(--dark-grey-stroke);}.home-v18 .process-step::before {top:1.9rem;left:-7px;}.home-v18 .process-count {position:absolute;left:.95rem;top:1.5rem;font-size:1.5rem;}.home-v18 .process-step h3 {margin-left:1rem;}.home-v18 .process-step p {margin-left:1rem;max-width:none;}}
+@media(max-width:600px) {.home-v18 .hero--studio h1 {font-size:clamp(2.65rem,10vw,3.8rem);}.home-v18 .offer-benefits {grid-template-columns:1fr;}.home-v18 .trust-strip--minimal .container{gap:1rem;}.home-v18 .hero-capabilities {gap:10px;}.home-v18 .capability-card{padding:1.1rem 1rem;min-height:175px;}}
+@media(prefers-reduced-motion:reduce) {.home-v18 .process-step,.home-v18 .capability-card {transition:none!important;}.home-v18 .capability-card:hover,.home-v18 .service-grid--editorial .card:hover {transform:none!important;}}
