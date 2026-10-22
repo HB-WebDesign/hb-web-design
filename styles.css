@@ -266,7 +266,7 @@ a:hover { text-decoration: underline; }
   transform: translateY(-50%);
   width: min(480px, 60vw);
   aspect-ratio: 1;
-  background: url('assets/mascot.png') center / contain no-repeat;
+  background: none center / contain no-repeat;
   opacity: var(--hero-watermark-opacity);
   pointer-events: none;
 }
@@ -720,7 +720,7 @@ body { background-image: none; }
   width: min(38vw, 440px);
   aspect-ratio: 1;
   transform: translateY(-50%);
-  background: url("assets/mascot.png") center / contain no-repeat;
+  background: none center / contain no-repeat;
   opacity: var(--hero-watermark-opacity);
   pointer-events: none;
   border: 0;
@@ -1022,7 +1022,7 @@ main > .section:not(.section--services):not(.section--quiet):not(.section--grid)
 .hero--studio { display:block; position:relative; isolation:isolate; overflow:hidden; background:var(--bg); padding:clamp(5rem,8vw,7.2rem) 0 clamp(2.8rem,5vw,4.6rem); min-height:0; }
 .hero--studio::before { content:""; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(115,123,139,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(115,123,139,.08) 1px,transparent 1px); background-size:40px 40px; background-position:center; z-index:-2; }
 /* Preserve the original mascot watermark, always on the RIGHT. */
-.hero--studio::after { content:""; position:absolute; width:clamp(250px,34vw,470px); height:clamp(250px,34vw,470px); right:clamp(-80px,3vw,45px); top:12%; transform:none; background:url('assets/mascot.png') center/contain no-repeat; opacity:var(--hero-watermark-opacity); pointer-events:none; z-index:-1; filter:none; border:0; border-radius:0; box-shadow:none; }
+.hero--studio::after { content:""; position:absolute; width:clamp(250px,34vw,470px); height:clamp(250px,34vw,470px); right:clamp(-80px,3vw,45px); top:12%; transform:none; background:none center/contain no-repeat; opacity:var(--hero-watermark-opacity); pointer-events:none; z-index:-1; filter:none; border:0; border-radius:0; box-shadow:none; }
 .hero--studio .hero-studio-content { max-width:1140px; position:relative; z-index:1; }
 .hero--studio .hero-studio-copy { max-width:770px; position:relative; z-index:2; }
 .hero--studio h1 { max-width:17ch; font-size:clamp(3rem,6.4vw,6.1rem); line-height:1.04; letter-spacing:-.048em; margin:1.2rem 0 1.4rem; text-wrap:balance; }
@@ -1058,3 +1058,157 @@ main > .section:not(.section--services):not(.section--quiet):not(.section--grid)
 .founder-offer { background:var(--surface-2); background-image:none; }
 .founder-offer::after, .offer-benefit::before, .offer-benefit::after { content:none; }
 .offer-benefit { background:transparent; background-image:none; box-shadow:none; }
+
+
+/* ==========================================================
+   V16 — Black / gray / white / dark-red editorial design
+   Dark-red feature boxes use white text; solid colors only.
+   ========================================================== */
+:root {
+  --dark-black: #171719;
+  --white: #ffffff;
+  --text-color: #dbdbdb;
+  --bright-red-stroke: #ac0404;
+  --red-transparency: #f003;
+  --red-stroke: #6e0505;
+  --grey-stroke: #a8a8a8;
+  --transparent-8: #ffffff14;
+  --dark-grey-stroke: #4a4a4a;
+  --red: #ff0000;
+  --accessible-components--dark-grey: #9b9b9b;
+  --accessible-components--dodger-blue: #1378d1;
+  --accent: var(--bright-red-stroke);
+  --accent-hover: #8d0303;
+  --accent-ink: #fff;
+  --accent-soft: var(--red-transparency);
+  --glow: rgba(172,4,4,.16);
+  --radius: 7px;
+  --shadow: 0 10px 26px rgba(0,0,0,.10);
+}
+/* Dark is the new default, light remains an accessible toggle. */
+[data-theme="dark"] {
+  --bg: #171719;
+  --surface: #212124;
+  --surface-2: #29292c;
+  --border: #4a4a4a;
+  --text: #fff;
+  --muted: #dbdbdb;
+  --accent: #ac0404;
+  --accent-hover: #c80b0b;
+  --accent-ink: #fff;
+  --accent-soft: #ff000018;
+  --grid-line: #ffffff0c;
+  --shadow: 0 10px 28px rgba(0,0,0,.23);
+}
+[data-theme="light"] {
+  --bg: #f3f3f3;
+  --surface: #fff;
+  --surface-2: #e8e8e8;
+  --border: #a8a8a8;
+  --text: #171719;
+  --muted: #434343;
+  --accent: #ac0404;
+  --accent-hover: #870303;
+  --accent-ink: #fff;
+  --accent-soft: #ac040412;
+  --grid-line: #1717190a;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+/* Remove mascot/logo art from all hero styles, including older rules. */
+.hero::after,.hero--studio::after { content:none !important; display:none !important; background:none !important; }
+.hero--studio {background-color:var(--bg);background-image:none;}
+.hero--studio::before {background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:44px 44px;z-index:-1;}
+.hero--studio h1 {color:var(--text);}
+.hero--studio .hero-accent {color:var(--text);background:var(--red-stroke);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .13em .06em;}
+.hero--studio .hero-studio-copy {max-width:850px;}
+[data-theme="light"] .hero--studio .hero-accent {color:white;}
+.studio-led {background:#ac0404;box-shadow:0 0 0 3px var(--red-transparency);}
+.studio-slash,.hero-terminal {color:var(--bright-red-stroke);}
+.hero--studio .lead {color:var(--muted);}
+.studio-service-areas {color:var(--muted);}
+.btn {border-radius:4px;font-weight:700;}
+.btn-primary,.nav .btn-primary {color:#fff;background:#6e0505;border-color:#ac0404;box-shadow:4px 4px 0 #ac0404;}
+.btn-primary:hover,.btn-primary:focus-visible,.nav .btn-primary:hover {color:#fff;background:#890707;border-color:#ff0000;transform:translate(-2px,-2px);box-shadow:6px 6px 0 #ac0404;}
+.btn-secondary {border-color:var(--grey-stroke);color:var(--text);background:transparent;}
+.btn-secondary:hover,.btn-secondary:focus-visible {background:var(--accent-soft);color:var(--text);border-color:var(--bright-red-stroke);box-shadow:none;}
+.theme-toggle,.nav-toggle {color:var(--text);}
+.site-header {background:var(--surface);border-color:var(--border);backdrop-filter:none;}
+/* Dark, crisp capability tiles. Two selectively emphasized dark-red tiles. */
+.capability-card {background:var(--surface);border:1px solid var(--border);border-radius:5px;box-shadow:none;color:var(--text);}
+.capability-card::before {content:none!important;display:none!important;}
+.capability-card:hover,.capability-card:focus-visible {box-shadow:5px 5px 0 var(--bright-red-stroke);border-color:var(--bright-red-stroke);color:var(--text);}
+.capability-card--highlight {background:#6e0505;color:#fff;border:1px solid #ac0404;}
+.capability-card--highlight .capability-symbol,
+.capability-card--highlight .capability-index,
+.capability-card--highlight .capability-arrow,
+.capability-card--highlight strong,
+.capability-card--highlight > span:not(.capability-symbol):not(.capability-index):not(.capability-arrow) {color:#fff;}
+.capability-card--highlight:hover,.capability-card--highlight:focus-visible {color:#fff;background:#800606;box-shadow:5px 5px 0 #ac0404;}
+.capability-card:not(.capability-card--highlight) .capability-symbol,
+.capability-card:not(.capability-card--highlight) .capability-arrow {color:var(--bright-red-stroke);}
+.capability-card strong {color:inherit;}
+/* Founder photo remains, but no floating mascot artwork or glow. */
+.founder-offer,.section--quiet {background:var(--surface-2);background-image:none;}
+.founder-offer::before,.founder-offer::after {content:none!important;}
+.owner-profile,.card,.work-card {border-radius:6px;box-shadow:none;}
+.owner-profile:hover,.owner-profile:focus-visible,
+.card:hover,.work-card:hover {box-shadow:5px 5px 0 var(--bright-red-stroke);border-color:var(--bright-red-stroke);}
+.owner-profile-info {border-top-color:var(--red-stroke);}
+.offer-benefits {gap:12px;margin-block:1.6rem 2rem;}
+.offer-benefit {background:var(--surface);padding:1.15rem;border:1px solid var(--border);border-radius:5px;box-shadow:none;}
+.offer-benefit::before,.offer-benefit::after {content:none!important;}
+.offer-benefit:hover {border-color:var(--bright-red-stroke);transform:translateY(-2px);}
+.offer-benefit--highlight {background:#6e0505;border-color:#ac0404;color:#fff;}
+.offer-benefit--highlight h3,.offer-benefit--highlight p,.offer-benefit--highlight .benefit-symbol {color:#fff;}
+.offer-benefit--highlight:hover {background:#800606;border-color:#ff0000;}
+.benefit-symbol {color:var(--bright-red-stroke);}
+/* Sharpen service/presentation cards; keep solid backgrounds. */
+.eyebrow,.badge {border-radius:3px;background:var(--accent-soft);border-color:var(--bright-red-stroke);color:var(--bright-red-stroke);}
+[data-theme="dark"] .eyebrow,[data-theme="dark"] .badge {color:#ff6c6c;}
+.service-grid .card {border-top:3px solid var(--dark-grey-stroke);}
+.service-grid .card:hover {border-top-color:var(--bright-red-stroke);}
+.service-icon {border-radius:4px;background:#6e0505;color:white;box-shadow:none;}
+.service-grid .card:hover .service-icon {box-shadow:none;}
+.cta-band {background:#6e0505;background-image:none;color:white;border:1px solid #ac0404;border-radius:6px;box-shadow:none;}
+.cta-band h2,.cta-band p {color:#fff;}
+.cta-band .btn-primary,[data-theme="dark"] .cta-band .btn-primary {background:#fff;color:#6e0505;border-color:#fff;box-shadow:4px 4px 0 #ac0404;}
+.cta-band .btn-primary:hover,[data-theme="dark"] .cta-band .btn-primary:hover {background:#f3f3f3;color:#6e0505;}
+/* Dark theme should stay legible, including pricing and headings. */
+[data-theme="dark"] .offer-pricing strong,[data-theme="dark"] .card .price {color:#fff;}
+[data-theme="dark"] .owner-profile-label,[data-theme="dark"] .founder-offer-content h2 em {color:#ff7777;}
+[data-theme="dark"] .nav .btn-primary {color:white;}
+[data-theme="light"] .capability-card--highlight,
+[data-theme="light"] .capability-card--highlight strong {color:white;}
+@media(max-width:580px) {.offer-benefits{gap:10px;}.capability-card{min-height:180px;}.hero--studio .hero-accent{box-decoration-break:clone;}}
+@media(prefers-reduced-motion:reduce) {.capability-card:hover,.offer-benefit:hover,.btn-primary:hover{transform:none!important;}}
+
+/* V17 — remove pastel-red text; use white typography and precise dark-red accents. */
+.founder-offer-content h2 em,
+[data-theme="dark"] .founder-offer-content h2 em {
+  color:var(--text);
+  font-style:normal;
+  text-decoration:underline;
+  text-decoration-color:var(--bright-red-stroke);
+  text-decoration-thickness:.09em;
+  text-underline-offset:.14em;
+  text-decoration-skip-ink:none;
+}
+[data-theme="dark"] .owner-profile-label,
+.owner-profile-label {color:var(--text);letter-spacing:.12em;}
+.owner-image-caption span {color:#fff;}
+[data-theme="dark"] .eyebrow,
+[data-theme="dark"] .badge {color:#fff;border-color:var(--red-stroke);background:var(--red-stroke);}
+[data-theme="light"] .eyebrow,
+[data-theme="light"] .badge {color:var(--text);border-color:var(--bright-red-stroke);background:transparent;}
+.studio-slash,.hero-terminal {color:var(--text);}
+[data-theme="dark"] .nav a.nav-link.active {color:#fff;}
+[data-theme="dark"] .nav a.nav-link.active::after {background:var(--bright-red-stroke);}
+[data-theme="dark"] .service-grid .card .price {color:#fff;}
+/* Keep highlight tiles consistently white, even in older inherited rules. */
+.capability-card--highlight > span,
+.capability-card--highlight strong,
+.capability-card--highlight .capability-symbol,
+.capability-card--highlight .capability-arrow,
+.offer-benefit--highlight h3,
+.offer-benefit--highlight p,
+.offer-benefit--highlight .benefit-symbol {color:#fff!important;}

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HB Web Design — Websites for Small Businesses</title>
-  <meta name="description" content="HB Web Design builds fast, hand-coded websites for small businesses in the Bay Area, New Orleans, and Durham. No page builders, no bloat — just sites that bring you customers.">
+  <meta name="description" content="HB Web Design builds fast, hand-coded websites for small businesses nationwide. No page builders, no bloat — just sites that bring you customers.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <script>
-    // Set theme before paint: saved choice > system preference > light default
+    // Set theme before paint: saved choice > system preference > dark default
     (function () {
       var saved = null;
       try { saved = localStorage.getItem('hb-theme'); } catch (e) {}
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var theme = saved || 'dark';
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
@@ -52,7 +52,7 @@
           <p class="hero-note"><span class="hero-terminal" aria-hidden="true">&gt;_</span> DESIGN / DEVELOPMENT / SUPPORT <span aria-hidden="true">·</span> NO PAGE BUILDERS</p>
         </div>
         <div class="hero-capabilities" aria-label="Why work with HB Web Design">
-          <a class="capability-card" href="services.html">
+          <a class="capability-card capability-card--highlight" href="services.html">
             <span class="capability-symbol" aria-hidden="true">&lt;/&gt;</span>
             <span class="capability-index">01 / DESIGN</span><strong>Custom-built</strong><span>Made for your business.</span>
             <span class="capability-arrow" aria-hidden="true">↗</span>
@@ -67,7 +67,7 @@
             <span class="capability-index">03 / PROCESS</span><strong>Work with me</strong><span>No agency middlemen.</span>
             <span class="capability-arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="capability-card" href="pricing.html">
+          <a class="capability-card capability-card--highlight" href="pricing.html">
             <span class="capability-symbol" aria-hidden="true">⌘</span>
             <span class="capability-index">04 / PRICING</span><strong>Clear options</strong><span>Know what you're getting.</span>
             <span class="capability-arrow" aria-hidden="true">↗</span>
@@ -118,10 +118,10 @@
           <p class="offer-intro">I build custom, mobile-friendly websites for small businesses that need a strong online presence without the complexity of a big agency. You work directly with the person designing and developing your site.</p>
           <p class="offer-pricing">One-time websites from <strong>$1,200</strong> <span aria-hidden="true">·</span> Care plans from <strong>$150/month</strong></p>
           <div class="offer-benefits">
-            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">01</span><div><h3>Made for your business</h3><p>Thoughtful layouts and content that reflect your services, personality, and customers.</p></div></article>
+            <article class="offer-benefit offer-benefit--highlight"><span class="benefit-symbol" aria-hidden="true">01</span><div><h3>Made for your business</h3><p>Thoughtful layouts and content that reflect your services, personality, and customers.</p></div></article>
             <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">02</span><div><h3>Fast and responsive</h3><p>Lightweight code and mobile-first design, tested for real-world usability.</p></div></article>
             <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">03</span><div><h3>Clean, maintainable code</h3><p>Focused HTML, CSS, and JavaScript without unnecessary page-builder overhead.</p></div></article>
-            <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">04</span><div><h3>Clear pricing and scope</h3><p>Know what's included, how the project works, and what happens after launch.</p></div></article>
+            <article class="offer-benefit offer-benefit--highlight"><span class="benefit-symbol" aria-hidden="true">04</span><div><h3>Clear pricing and scope</h3><p>Know what's included, how the project works, and what happens after launch.</p></div></article>
             <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">05</span><div><h3>Direct access to me</h3><p>No handoffs or account-manager layers. Ask questions and get answers from your developer.</p></div></article>
             <article class="offer-benefit"><span class="benefit-symbol" aria-hidden="true">06</span><div><h3>Built to be found</h3><p>Accessible structure and search-friendly foundations to help customers discover you.</p></div></article>
           </div>
