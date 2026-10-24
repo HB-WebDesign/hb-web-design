@@ -1511,3 +1511,181 @@ main > .section:not(.section--services):not(.section--quiet):not(.section--grid)
   .site-subpage .portfolio-feature,.site-subpage .sub-timeline li,.site-subpage .text-action span {transition:none!important;}
   .site-subpage .portfolio-feature:hover,.site-subpage .btn:hover {transform:none!important;}
 }
+
+
+/* ============================================================
+   V20 | SOFT OFF-WHITE LIGHT MODE
+   Deliberately scoped to [data-theme="light"] so the approved
+   dark theme, hero layout, and component behavior are unchanged.
+   ============================================================ */
+[data-theme="light"] {
+  /* Neutral, paper-like off-whites rather than stark #fff. */
+  --bg: #e9e8e4;
+  --surface: #f3f2ee;
+  --surface-2: #deddd8;
+  --border: #c5c2bc;
+  --text: #242426;
+  --muted: #525056;
+  --accent: #ac0404;
+  --accent-hover: #870303;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(110, 5, 5, .075);
+  --grid-line: rgba(36, 36, 38, .035);
+  --shadow: 0 8px 24px rgba(24, 24, 27, .055);
+  --grey-stroke: #97938e;
+  color-scheme: light;
+}
+
+/* Give the frame the same quiet, matte treatment as the content. */
+[data-theme="light"] .site-header {
+  background: #efeee9;
+  border-bottom-color: #c5c2bc;
+  box-shadow: 0 2px 14px rgba(23, 23, 25, .035);
+}
+[data-theme="light"] .site-footer {
+  background: #e2e0da;
+  border-top-color: #c5c2bc;
+}
+[data-theme="light"] .section--quiet,
+[data-theme="light"] .founder-offer,
+[data-theme="light"] .site-subpage .sub-section--contrast {
+  background: var(--surface-2);
+}
+[data-theme="light"] .home-v18 .founder-offer {
+  background: var(--surface-2);
+}
+[data-theme="light"] .card,
+[data-theme="light"] .work-card,
+[data-theme="light"] .pricing-option,
+[data-theme="light"] .site-subpage .pricing-panel,
+[data-theme="light"] .site-subpage .portfolio-feature,
+[data-theme="light"] .site-subpage .faq--editorial details,
+[data-theme="light"] .site-subpage .contact-side__block:not(.contact-side__block--highlight),
+[data-theme="light"] .site-subpage .contact-form-panel,
+[data-theme="light"] .site-subpage .about-photo {
+  background: var(--surface);
+  border-color: var(--border);
+}
+/* Inputs should look editable without introducing pure-white rectangles. */
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea,
+[data-theme="light"] .form-group select,
+[data-theme="light"] .site-subpage .contact-form input,
+[data-theme="light"] .site-subpage .contact-form select,
+[data-theme="light"] .site-subpage .contact-form textarea {
+  background: #f0efeb;
+  border-color: #b6b2ac;
+  color: var(--text);
+}
+[data-theme="light"] .form-group input:focus-visible,
+[data-theme="light"] .form-group textarea:focus-visible,
+[data-theme="light"] .form-group select:focus-visible {
+  outline: 2px solid #ac0404;
+  outline-offset: 2px;
+}
+/* Secondary buttons and tags use dark ink and muted lines. */
+[data-theme="light"] .btn-secondary,
+[data-theme="light"] .site-subpage .btn-secondary {
+  color: var(--text);
+  border-color: #aaa6a0;
+}
+[data-theme="light"] .btn-secondary:hover,
+[data-theme="light"] .site-subpage .btn-secondary:hover {
+  background: rgba(110, 5, 5, .065);
+  border-color: #ac0404;
+  color: var(--text);
+}
+[data-theme="light"] .eyebrow,
+[data-theme="light"] .badge {
+  background: transparent;
+  border-color: #ac0404;
+  color: #6e0505;
+}
+/* Keep white lettering ONLY on dark-red boxes and dark visual sections. */
+[data-theme="light"] .capability-card--highlight,
+[data-theme="light"] .offer-benefit--highlight,
+[data-theme="light"] .site-subpage .contact-side__block--highlight {
+  background: #6e0505;
+  border-color: #ac0404;
+  color: #ffffff;
+}
+/* CTA banners remain red; their formerly white action buttons soften too. */
+[data-theme="light"] .cta-band .btn-primary,
+[data-theme="light"] .home-v18 .cta-band .btn-primary,
+[data-theme="light"] .site-subpage .cta-band .btn-primary {
+  background: #f0efeb;
+  border-color: #f0efeb;
+  color: #6e0505;
+}
+[data-theme="light"] .cta-band .btn-primary:hover,
+[data-theme="light"] .home-v18 .cta-band .btn-primary:hover,
+[data-theme="light"] .site-subpage .cta-band .btn-primary:hover {
+  background: #deddd8;
+  border-color: #deddd8;
+  color: #6e0505;
+}
+/* Preserve intentionally dark hero, trust, timeline and portfolio previews. */
+[data-theme="light"] .home-v18 .trust-strip--minimal,
+[data-theme="light"] .home-v18 .section--grid,
+[data-theme="light"] .site-subpage .page-hero,
+[data-theme="light"] .site-subpage .portfolio-feature__visual {
+  background-color: #171719;
+}
+/* Give the light homepage hero a soft canvas and legible tile surfaces. */
+[data-theme="light"] .home-v18 .hero--studio {
+  background-color: var(--bg);
+}
+[data-theme="light"] .home-v18 .capability-card:not(.capability-card--highlight) {
+  background: #f0efeb;
+  border-color: #c5c2bc;
+  color: var(--text);
+}
+[data-theme="light"] .home-v18 .capability-card:not(.capability-card--highlight) strong {
+  color: var(--text);
+}
+/* Concept media should read as intentionally matte, not white placeholders. */
+[data-theme="light"] .work-card .work-media {
+  background: #d7d5d0;
+  color: var(--muted);
+}
+
+
+/* ============================================================
+   Responsive navigation refinement — tablet widths
+   The full-width desktop links become cramped between 641px and
+   roughly 900px. Use the existing accessible hamburger menu early.
+   ============================================================ */
+@media (min-width: 641px) and (max-width: 940px) {
+  .site-header .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .site-header .nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem 1.5rem 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 14px 28px rgba(0,0,0,.18);
+    z-index: 101;
+  }
+  .site-header .nav.open { display: flex; }
+  .site-header .nav a.nav-link {
+    display: block;
+    padding: .9rem .5rem;
+    border-top: 1px solid var(--border);
+  }
+  .site-header .nav .theme-toggle { margin: .8rem 0 .25rem; align-self: flex-start; }
+  .site-header .nav .btn { margin: .8rem 0 0; text-align: center; }
+}
