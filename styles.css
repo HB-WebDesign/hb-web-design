@@ -1511,3 +1511,190 @@ main > .section:not(.section--services):not(.section--quiet):not(.section--grid)
   .site-subpage .portfolio-feature,.site-subpage .sub-timeline li,.site-subpage .text-action span {transition:none!important;}
   .site-subpage .portfolio-feature:hover,.site-subpage .btn:hover {transform:none!important;}
 }
+
+
+/* Wolf Spider | Web Design — wordmark integration only (V23).
+   All existing page visuals, type scales, colors and animations are unchanged. */
+.site-header .wolf-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  min-width: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.site-header .wolf-logo-mark,
+.site-footer .wolf-footer-mark {
+  display: block;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+.site-header .wolf-wordmark,
+.site-header .wolf-wordmark span {
+  color: var(--text);
+}
+.site-header .wolf-wordmark {
+  font-family: var(--font-display, var(--font-sans));
+  display: inline-flex;
+  align-items: baseline;
+  gap: .28rem;
+  font-size: clamp(.86rem, 1.18vw, 1.02rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  text-transform: none;
+}
+.site-header .wolf-wordmark .wolf-pipe,
+.site-footer .footer-brand--wolf .wolf-pipe {
+  color: #ac0404;
+  font-weight: 850;
+}
+.site-header .wolf-wordmark .wolf-pipe {font-size: 1.13em;}
+.site-footer .footer-brand--wolf {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-bottom: .6rem;
+  line-height: 1.15;
+  color: var(--text);
+}
+.site-footer .footer-brand--wolf span {color: var(--text);}
+.site-footer .footer-brand--wolf .wolf-pipe {color: #ac0404;}
+.site-footer .wolf-footer-mark {width: 36px;height: 36px;}
+.site-footer .wolf-footer-wordmark {font-family: var(--font-display, var(--font-sans));font-size: 1.1rem;font-weight: 800;letter-spacing: -.03em;}
+/* An older homepage rule inserted a pipe after the HB monogram; no longer needed. */
+.home-v18 .footer-brand--wolf > span:first-child::after {content: none;}
+
+/* The new wordmark is wider than HB. Collapse nav before links become crowded. */
+@media (max-width: 1100px) {
+  .site-header .nav-toggle {display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .site-header .nav {
+    display:none;
+    position:absolute;
+    top:var(--header-height);
+    left:0;
+    right:0;
+    z-index:90;
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    flex-direction:column;
+    align-items:stretch;
+    padding:1rem 1.5rem 1.5rem;
+    box-shadow:0 10px 18px rgba(0,0,0,.12);
+  }
+  .site-header .nav.open {display:flex;}
+  .site-header .nav a.nav-link {padding:.9rem .5rem;border-top:1px solid var(--border);}
+  .site-header .nav .btn {margin:1rem 0 0;text-align:center;}
+  .site-header .theme-toggle {margin-left:0;}
+}
+@media (max-width: 480px) {
+  .site-header .wolf-brand {gap:.5rem;}
+  .site-header .wolf-logo-mark {width:36px;height:36px;}
+  .site-header .wolf-wordmark {display:flex;flex-direction:column;align-items:flex-start;gap:.1rem;font-size:.91rem;line-height:1.07;}
+  .site-header .wolf-wordmark .wolf-pipe {display:none;}
+  .site-header .wolf-wordmark .wolf-descriptor::before {content:"|";color:#ac0404;margin-right:.35rem;}
+}
+
+
+/* V24 — Wolf Spider logo assets. No site layout or palette changes. */
+.site-header .wolf-logo-mark,
+.site-footer .wolf-footer-mark {
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+}
+.site-subpage .wolf-about-emblem {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .6rem;
+  margin-top: 1.5rem;
+}
+.site-subpage .wolf-about-emblem img {
+  display: block;
+  width: clamp(145px, 17vw, 215px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: transparent;
+}
+.site-subpage .wolf-about-emblem span {
+  color: var(--muted);
+  font-size: .66rem;
+  font-weight: 750;
+  letter-spacing: .14em;
+}
+/* Light background: original black ink; dark background: white ink.
+   Hue rotation retains the crimson eye when inverting black artwork. */
+[data-theme="light"] .site-header .wolf-logo-mark,
+[data-theme="light"] .site-footer .wolf-footer-mark,
+[data-theme="light"] .site-subpage .wolf-about-emblem img {filter: none;mix-blend-mode: multiply;}
+[data-theme="dark"] .site-header .wolf-logo-mark,
+[data-theme="dark"] .site-footer .wolf-footer-mark,
+[data-theme="dark"] .site-subpage .wolf-about-emblem img {filter: invert(1) hue-rotate(180deg);mix-blend-mode: screen;}
+
+
+/* V25 — restrained web-woven wolf accents on Home and Contact only.
+   Existing wordmarks, About logo and layout are unchanged. */
+.home-v18 .hero-studio-content { position: relative; }
+.home-v18 .hero-web-art {
+  position: absolute;
+  /* Sit in the open upper-right corner of the hero, above the headline. */
+  top: -3.5rem;
+  right: -1.75rem;
+  width: clamp(185px, 17vw, 240px);
+  margin: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.home-v18 .hero-web-art img,
+.site-subpage .contact-web-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* Home follows the hero theme. Contact's page-hero is dark in both themes. */
+[data-theme="light"] .home-v18 .hero-web-art img {
+  filter: none;
+  mix-blend-mode: multiply;
+}
+[data-theme="dark"] .home-v18 .hero-web-art img,
+.site-subpage .contact-web-art img {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+.site-subpage .page-hero__aside .contact-web-art {
+  width: clamp(116px, 12vw, 172px);
+  margin: 1.35rem 0 0;
+  pointer-events: none;
+}
+/* At laptop widths, keep the wolf beside the intro rather than letting
+   it drop below the headline or intrude into the text. */
+@media(min-width: 961px) and (max-width: 1199px) {
+  .home-v18 .hero-web-art {
+    top: -3.75rem;
+    right: -1rem;
+    width: clamp(150px, 16vw, 190px);
+  }
+}
+@media(max-width: 960px) {
+  .home-v18 .hero-web-art {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: clamp(116px, 19vw, 170px);
+    margin: 1rem 0 0 auto;
+  }
+}
+@media(max-width: 600px) {
+  .home-v18 .hero-web-art { width: 116px; margin-top: 1.2rem; }
+  .site-subpage .page-hero__aside .contact-web-art { width: 116px; margin-top: 1rem; }
+}

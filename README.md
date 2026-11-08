@@ -1,8 +1,8 @@
-# HB | Web Design
+# Wolf Spider | Web Design
 
 **Small Business Web Design, Built To Make An Impact.**
 
-A custom-built website for **HB Web Design**, an independent web design studio based in Durham, North Carolina, working with small businesses nationwide.
+A custom-built website for **Wolf Spider | Web Design**, an independent web design studio based in Durham, North Carolina, working with small businesses nationwide.
 
 The goal is simple: help small businesses establish a professional online presence with clear messaging, mobile-friendly layouts, and an easy way for customers to get in touch.
 
@@ -18,18 +18,18 @@ Its visual direction combines a minimal, modern agency layout with subtle retro-
 - Deep-red (`#6e0505`) highlight boxes and stronger red (`#ac0404`) accents
 - Bold typography, numbered sections, and understated grid details
 - Responsive layouts, accessible navigation, and restrained hover effects
-- A consistent **HB | Web Design** text identity, with the **B** and divider in red
+- A compact wolf icon and **Wolf Spider | Web Design** wordmark, with the divider in red
 
 ## Pages
 
-| Page                           | Purpose                                                                                                     |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| **Home** (`index.html`)        | Studio introduction, key benefits, services, featured concepts, pricing overview, and project inquiry links |
-| **Services** (`services.html`) | Custom website builds, redesigns, care plans, and the development process                                   |
-| **Work** (`work.html`)         | Portfolio concept showcases; these are labeled as concepts, **not completed client projects**               |
-| **Pricing** (`pricing.html`)   | One-time projects, monthly plans, and frequently asked questions                                            |
-| **About** (`about.html`)       | Introduction to Hector Barahona, his approach, and his portrait                                             |
-| **Contact** (`contact.html`)   | Project inquiry form and an outline of what happens next                                                    |
+| Page | Purpose |
+| --- | --- |
+| **Home** (`index.html`) | Studio introduction, key benefits, services, featured concepts, pricing overview, and project inquiry links |
+| **Services** (`services.html`) | Custom website builds, redesigns, care plans, and the development process |
+| **Work** (`work.html`) | Portfolio concept showcases; these are labeled as concepts, **not completed client projects** |
+| **Pricing** (`pricing.html`) | One-time projects, monthly plans, and frequently asked questions |
+| **About** (`about.html`) | Introduction to Hector Barahona, his approach, and his portrait |
+| **Contact** (`contact.html`) | Project inquiry form and an outline of what happens next |
 
 ## Built with
 
@@ -54,8 +54,11 @@ hb-web-design/
 ├── main.js
 ├── README.md
 └── assets/
+    ├── wolf-spider-avatar.webp  # Compact brand mark in header/footer
+    ├── wolf-spider-mark.webp    # Detailed logo on About, adapted via CSS to dark/light mode
+    ├── favicon.png             # Browser tab icon
     ├── portrait.jpg       # Photo used on Home and About
-    └── ...                # Other local assets, such as the site favicon
+    └── favicon.png        # Wolf Spider icon in tabs, header and footer
 ```
 
 The actual contents of `assets/` may differ; keep any images or icons referenced by the pages.
@@ -98,7 +101,7 @@ All pages load `styles.css`. The homepage is the reference for the site's typogr
 
 ### Branding
 
-The primary identity is **HB | Web Design**. The **B** and vertical divider are red. The decorative mascot watermark is no longer part of the homepage design.
+The primary identity is **Wolf Spider | Web Design**. A simplified wolf emblem appears in the header, footer and favicon, while the vertical divider is red. The larger illustrated wolf artwork is intentionally not part of the homepage.
 
 ## Before launching
 
@@ -122,4 +125,4 @@ The current work is a site-wide design pass followed by individual refinement of
 
 ---
 
-**Designed and developed by Hector Barahona · HB | Web Design**
+**Designed and developed by Hector Barahona · Wolf Spider | Web Design**

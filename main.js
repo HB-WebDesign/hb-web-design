@@ -74,7 +74,6 @@
   });
 })();
 
-
 /* Progressive enhancement: subtle section entrances, no dependencies. */
 (function () {
   if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
