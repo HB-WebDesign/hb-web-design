@@ -1594,12 +1594,26 @@ main > .section:not(.section--services):not(.section--quiet):not(.section--grid)
   .site-header .nav .btn {margin:1rem 0 0;text-align:center;}
   .site-header .theme-toggle {margin-left:0;}
 }
+/* V32: Keep the complete Wolf Spider | Web Design wordmark on one line
+   on small phones without squeezing the hamburger or changing desktop layout. */
 @media (max-width: 480px) {
-  .site-header .wolf-brand {gap:.5rem;}
-  .site-header .wolf-logo-mark {width:36px;height:36px;}
-  .site-header .wolf-wordmark {display:flex;flex-direction:column;align-items:flex-start;gap:.1rem;font-size:.91rem;line-height:1.07;}
-  .site-header .wolf-wordmark .wolf-pipe {display:none;}
-  .site-header .wolf-wordmark .wolf-descriptor::before {content:"|";color:#ac0404;margin-right:.35rem;}
+  .site-header .container {padding-inline:clamp(.625rem,3vw,1rem);gap:.45rem;}
+  .site-header .wolf-brand {gap:.4rem;min-width:0;flex:1 1 auto;}
+  .site-header .wolf-logo-mark {width:36px;height:36px;flex:0 0 36px;}
+  .site-header .wolf-wordmark {
+    display:inline-flex;
+    flex-direction:row;
+    align-items:baseline;
+    flex-wrap:nowrap;
+    white-space:nowrap;
+    gap:.18rem;
+    font-size:clamp(.79rem,3.15vw,.94rem);
+    letter-spacing:-.035em;
+    line-height:1.15;
+  }
+  .site-header .wolf-wordmark .wolf-pipe {display:inline;font-size:1.08em;}
+  .site-header .wolf-wordmark .wolf-descriptor::before {content:none;}
+  .site-header .nav-toggle {width:40px;height:40px;flex:0 0 40px;}
 }
 
 
@@ -1698,3 +1712,112 @@ main > .section:not(.section--services):not(.section--quiet):not(.section--grid)
   .home-v18 .hero-web-art { width: 116px; margin-top: 1.2rem; }
   .site-subpage .page-hero__aside .contact-web-art { width: 116px; margin-top: 1rem; }
 }
+
+
+/* ==============================================================
+   V28 — Two website offerings & accessible pricing comparison
+   Existing Wolf Spider branding, hero art and dark/light design stay.
+   ============================================================== */
+.home-v18 .service-grid--editorial.service-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
+  margin-inline: auto;
+}
+.home-v18 .service-grid--two .card { min-width: 0; }
+.home-v18 .service-grid--two .service-price-unit {
+  color: var(--muted); font: 600 .82rem var(--font-sans); letter-spacing: 0;
+}
+.site-subpage .service-plan-note {
+  font-size: .88rem; line-height: 1.65; color: var(--muted);
+  border-left: 3px solid var(--red-stroke); padding-left: .85rem;
+  margin: 0 0 1.3rem;
+}
+/* Pricing cards: deliberate, readable distinctions, not promises of unlimited support. */
+.site-subpage .pricing-layout--comparison {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1040px; align-items: stretch;
+}
+.site-subpage .pricing-package {
+  border-top: 4px solid var(--dark-grey-stroke);
+  padding: clamp(1.3rem, 3vw, 2.5rem);
+  min-width: 0;
+}
+.site-subpage .pricing-package--monthly {border-top-color: var(--bright-red-stroke);}
+.site-subpage .pricing-package h3 {font-size: clamp(1.7rem, 2.3vw, 2.25rem);margin: .4rem 0 .7rem;}
+.site-subpage .pricing-package .pricing-panel__desc {margin-bottom: 1.5rem;min-height: 4.3em;}
+.site-subpage .pricing-package__price {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .55rem;
+  font: 800 clamp(2.7rem, 4vw, 3.7rem)/1.15 var(--font-display, var(--font-sans));
+  letter-spacing: -.055em; color: var(--text); margin-top: .25rem;
+}
+.site-subpage .pricing-package__price span {font: 650 .89rem var(--font-sans);letter-spacing:0;color:var(--muted);}
+.site-subpage .pricing-package__subline {font-size: .82rem;font-weight: 650;color: var(--muted);margin: .4rem 0 1.7rem;}
+.site-subpage .pricing-package__list-label {
+  font: 800 .73rem/1.4 var(--font-sans);letter-spacing: .12em;
+  color: var(--text); padding-top: 1.4rem; border-top: 1px solid var(--border);
+  margin: 0 0 .6rem; width:100%;
+}
+.site-subpage .pricing-package__features {list-style:none;padding:0;margin:0 0 1.5rem;width:100%;}
+.site-subpage .pricing-package__features .package-feature {
+  display:flex;align-items:center;gap: .75rem;
+  border-bottom: 1px solid var(--border);
+  padding:.8rem 0; font-size:.92rem;line-height:1.45;color: var(--text);
+}
+.site-subpage .pricing-package__features .package-feature:last-child {border-bottom:0;}
+.site-subpage .package-feature__icon {
+  width: 21px;height:21px; flex:0 0 21px; display:inline-grid;place-items:center;
+  border-radius:50%; position:relative;
+}
+.site-subpage .package-feature--included .package-feature__icon {
+  background: #6e0505; border: 1px solid #ac0404; color:#fff;
+}
+.site-subpage .package-feature--included .package-feature__icon::before {
+  content:"✓"; font:800 14px/1 var(--font-sans); color:#fff;
+}
+.site-subpage .package-feature--excluded {color:var(--muted);}
+.site-subpage .package-feature--excluded .package-feature__icon {
+  border: 2px solid var(--muted);opacity: .75;
+}
+.site-subpage .package-feature--excluded .package-feature__icon::before {
+  content:"";position:absolute;top:8px;left:2px;width:13px;height:2px;
+  background:var(--muted);transform:rotate(-45deg);border-radius:2px;
+}
+.site-subpage .pricing-package__note {color:var(--muted);font-size:.84rem;line-height:1.65;margin:0 0 1.6rem;}
+.site-subpage .pricing-package>.btn {width:100%;min-height:48px;text-align:center;white-space:normal;}
+.sr-only {
+  position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+@media(max-width:800px) {
+  .site-subpage .pricing-layout--comparison {grid-template-columns:1fr;max-width:580px;}
+}
+@media(max-width:640px) {
+  .home-v18 .service-grid--editorial.service-grid--two {grid-template-columns:1fr;max-width:560px;}
+  .site-subpage .pricing-package .pricing-panel__desc {min-height:0;}
+}
+
+
+/* V29 — Homepage service cards link to Pricing; highlight offer figures. */
+.home-v18 .service-grid--two a.service-card-link,
+.home-v18 .service-grid--two a.service-card-link:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+.home-v18 .service-grid--two .service-card-link__action {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: 1.15rem;
+  width: fit-content;
+  font: 700 .84rem var(--font-sans);
+  color: #ac0404;
+}
+.home-v18 .service-grid--two a.service-card-link:hover .service-card-link__action,
+.home-v18 .service-grid--two a.service-card-link:focus-visible .service-card-link__action {
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+/* Brand-red highlight in light mode; brighter red retains contrast in dark mode. */
+.home-v18 .offer-pricing strong { color: #ac0404; }
+[data-theme="dark"] .home-v18 .offer-pricing strong,
+[data-theme="dark"] .home-v18 .service-grid--two .service-card-link__action { color: #ff6262; }

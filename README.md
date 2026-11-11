@@ -25,11 +25,18 @@ Its visual direction combines a minimal, modern agency layout with subtle retro-
 | Page | Purpose |
 | --- | --- |
 | **Home** (`index.html`) | Studio introduction, key benefits, services, featured concepts, pricing overview, and project inquiry links |
-| **Services** (`services.html`) | Custom website builds, redesigns, care plans, and the development process |
+| **Services** (`services.html`) | Two website packages (one-time and monthly), plus the development process |
 | **Work** (`work.html`) | Portfolio concept showcases; these are labeled as concepts, **not completed client projects** |
-| **Pricing** (`pricing.html`) | One-time projects, monthly plans, and frequently asked questions |
+| **Pricing** (`pricing.html`) | A $2,000 one-time website, a $175/month website plan, and FAQs |
 | **About** (`about.html`) | Introduction to Hector Barahona, his approach, and his portrait |
 | **Contact** (`contact.html`) | Project inquiry form and an outline of what happens next |
+
+## Website packages
+
+- **One-Time Website — $2,000:** Custom five-page website with ownership after final payment. Hosting and routine edits are not included.
+- **Monthly Website — $175/month:** Custom website with hosting and agreed routine small content edits. Terms, ownership and cancellation details are confirmed in writing.
+
+Redesigning an existing website is handled within either package depending on scope.
 
 ## Built with
 
